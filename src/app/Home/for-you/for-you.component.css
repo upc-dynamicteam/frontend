@@ -1,0 +1,48 @@
+.container-general-offers{
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: white;
+    margin-right: 20px;
+}
+.container-offers{
+    display: flex;
+    justify-content: space-around;
+    width: 1200px;
+}
+.element-offer{
+    display: flex;
+    flex-direction: column;;
+    align-items: center;
+}
+.element-description{
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    width: 205px;
+}
+.img-home{
+    width: 205pX;
+    height: 113px;
+    border-radius: 20px;
+}
+.container-prices{
+    display: flex;
+}
+.container-prices p:first-child{
+    margin-right: 20px;
+    text-decoration-line: line-through;
+}
+.container-prices p {
+    font-size: 16px;
+    font-weight: 700;
+}
+.ml-50{
+    margin-left: 50px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+.container-starts{
+    display: flex;
+}
