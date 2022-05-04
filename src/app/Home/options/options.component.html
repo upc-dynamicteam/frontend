@@ -1,0 +1,8 @@
+<div *ngIf = "show"  class="container-options">
+    <p (click) = "login()">Inicia Sesión</p>
+    <p (click) = "registerTourist()">Registrate como usuario</p>
+    <p (click) = "registerAgency()">Registrate como agencia</p>
+</div>
+<app-login id = "login" ></app-login>
+<app-register-tourist id = "registerTourist"></app-register-tourist>
+<app-register-agency id = "registerAgency"></app-register-agency>

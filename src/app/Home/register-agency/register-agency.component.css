@@ -1,0 +1,132 @@
+/** CONTAINER LOGIN **/
+.modal{
+    display: block;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.container-login{
+    background-color: #fefefe;
+    margin: auto;
+    width: 640px;
+    height: 600px;
+    border: 1px solid #888;
+}
+.container-login-content{
+    margin-top: 40px;
+    margin-left: 50px;
+}
+.close{
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 120px;
+}
+.close:hover{
+    cursor: pointer;
+}
+/** CONTENT REGISTER **/
+.container-login-title{
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 40px;
+}
+.container-login-title h3{
+    font-size: 20px;
+}
+
+.btn{
+    background-color: #9CD4E7;
+    width: 530px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.input{
+    width: 530px;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 10px;
+    font-weight: bold;
+    color: #C4C4C4;
+    border: 3px solid #B6DDE9;
+}
+.input-top{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: 0px;
+}
+.input-bottom{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.black{
+    color: black;
+    font-weight: bold;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.text-password{
+    width: 90%;
+    text-align: center;
+    border-bottom: 1px solid #C4C4C4;
+    line-height: 0.1em;
+    margin: 50px 20px 40px 0;
+}
+.text-password span{
+    background:#fff;
+    padding:0 10px;
+}
+.container-inputs{
+    width: 548px;
+    display: flex;
+}
+.input-bottom-extra{
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.input-bottom-extra-2{
+    border-left: 0px;
+    border-radius: 0px 0px 20px 0px;
+}
+.container-checkbox{
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+}
+.checkbox-element{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.checkbox-element input{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+}
+.checkbox-element label{
+    font-size: 20px;
+    margin-left: 15px;
+    font-weight: bold;
+}
+.input-top-extra{
+    border-top: 0px;
+    border-radius: 0px;
+}
+.input-bottom-extra-3{
+    border-radius: 0px;
+}

@@ -1,0 +1,19 @@
+.container-options{
+    width: 205px;
+    height: 125px;
+    position: absolute;
+    border-radius: 20px;
+    top:70px;
+    left: 280px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.container-options p {
+    margin-left: 10px;
+}
+@media screen and (min-width: 1600px) and (max-width: 2000px){
+    .container-options{
+        left: 455px;
+    }
+}
