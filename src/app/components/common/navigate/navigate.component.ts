@@ -7,8 +7,7 @@ import { Component } from '@angular/core';
 })
 export class NavigateComponent   {
 
-    value: boolean = false
-
+    value: boolean = false;
 
     change(): void{
         this.value = !this.value
