@@ -37,6 +37,4 @@ export class OffersComponent {
             priceOffer: 785
         }
     ]
-
-
 }
