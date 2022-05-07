@@ -2,33 +2,21 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeModule } from "./home/home.module";
-import { ServiceDetailsModule } from "./service-details/service-details.module";
-import { AppRoutingModule } from "./app-routing.module";
-import { AgencyClientsModule } from "./agency-clients/agency-clients.module";
-import { HttpClientModule } from "@angular/common/http";
-import { ReactiveFormsModule } from "@angular/forms";
-import {SharedModule} from "./shared/shared.module";
-import {MatIconModule} from "@angular/material/icon";
-import {AgencyProfileModule} from "./agency-profile/agency-profile.module";
+import {HomeModule} from "./pages/Home/home.module";
+import {ServiciosDetallesModule} from "./pages/ServiciosDetalles/servicios-detalles.module";
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
       BrowserModule,
       HomeModule,
       BrowserAnimationsModule,
-      ServiceDetailsModule,
-      AgencyClientsModule,
-      AgencyProfileModule,
+      ServiciosDetallesModule,
       BrowserAnimationsModule,
-      AppRoutingModule,
-      HttpClientModule,
-      ReactiveFormsModule,
-      MatIconModule,
-      SharedModule
+      AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
