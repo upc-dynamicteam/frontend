@@ -1,0 +1,19 @@
+.top-card {
+  margin: auto;
+  border-radius: 2%;
+  max-width: 90%;
+  margin-bottom: 20px;
+}
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.profile-image {
+  background-image: url('https://picsum.photos/200/600');
+  background-size: cover;
+}
+.agency-info {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
