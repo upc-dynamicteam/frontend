@@ -11,6 +11,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterTouristComponent } from './register-tourist/register-tourist.component';
 import { RegisterAgencyComponent } from './register-agency/register-agency.component';
 import {MatIconModule} from "@angular/material/icon";
+import {HomePageComponent} from "./home-page/home-page.component";
+import {HomeRoutingModule} from "./homeRouting.module";
 
 @NgModule({
   declarations: [
@@ -24,11 +26,17 @@ import {MatIconModule} from "@angular/material/icon";
       LoginComponent,
       RegisterTouristComponent,
       RegisterAgencyComponent,
+      HomePageComponent
   ],
   exports: [
       MainPageComponent,
       NavigateComponent,
-      SidebarComponent
+
+      SidebarComponent,
+
+      SidebarComponent,
+      HomePageComponent,
+      HomeRoutingModule
   ],
     imports: [
         CommonModule,
