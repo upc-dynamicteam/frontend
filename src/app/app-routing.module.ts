@@ -3,20 +3,21 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
-    {
-        path: 'servicios',
-        loadChildren: () => import('./pages/ServiciosDetalles/servicios-detalles.module').then(m => m.ServiciosDetallesModule )
-    },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
     {
         path: 'home',
-        loadChildren: () => import('./pages/Home/home.module').then(m => m.HomeModule )
+        loadChildren: () => import('./Home/home.module').then(m => m.HomeModule )
+    },
+    {
+        path: 'servicio',
+        loadChildren: () => import('./ServiciosDetalles/servicios-detalles.module').then(m => m.ServiciosDetallesModule )
     }
 ];
 
 
 @NgModule({
     imports: [
-        RouterModule.forRoot( routes  )
+        RouterModule.forRoot( routes )
     ],
     exports: [
         RouterModule
