@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ServiceOffer} from "../../interfaces/service-offer";
+import {ServiceOffer} from "../../interfaces/ServiceOffer";
 
 @Component({
   selector: 'app-offers',

@@ -3,33 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
     {
         path: 'home',
-        loadChildren: () => import('./home/home.module').then(m => m.HomeModule )
+        loadChildren: () => import('./Home/home.module').then(m => m.HomeModule )
     },
     {
-        path: 'service',
-        loadChildren: () => import('./service-details/service-details.module').then(m => m.ServiceDetailsModule )
-    },
-    {
-        path: 'clients',
-        loadChildren: () => import('./agency-clients/agency-clients.module').then(m => m.AgencyClientsModule )
-    },
-    {
-        path: "profile-tourist/:id",
-        loadChildren: () => import("./profile-tourist/profile-tourist.module").then(m => m.ProfileTouristModule)
-    },
-    {
-        path: 'search/:text',
-        loadChildren: () => import('./search-system/search-system.module').then(m => m.SearchSystemModule ),
-        runGuardsAndResolvers: 'paramsOrQueryParamsChange'
-    },
-    {
-        path: "agency-profile",
-        loadChildren: () => import("./agency-profile/agency-profile.module").then(m => m.AgencyProfileModule)
-    },
-    { path: '**', redirectTo: 'home', pathMatch: 'full' }
+        path: 'servicio',
+        loadChildren: () => import('./ServiciosDetalles/servicios-detalles.module').then(m => m.ServiciosDetallesModule )
+    }
 ];
 
 

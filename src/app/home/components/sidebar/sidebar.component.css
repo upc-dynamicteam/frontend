@@ -1,12 +1,25 @@
-.content{
+.content-sidebar{
     display: flex;
     flex-direction: column;
-    margin: 10px 30px 0 60px;
+    align-items: flex-end;
+    margin-top: 10px;
+    margin-right: 80px;
+}
+.categories{
     background-color: white;
     border-radius: 20px;
     padding: 10px;
 }
-
-.left-align {
-    text-align: left;
+.weight{
+    font-weight: bold;
+}
+.flights{
+    margin-top: 30px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.line{
+    border-bottom: 1px solid #EEEEEE;
 }
