@@ -1,0 +1,165 @@
+{
+    "agencies": [
+        {   "id": "a1",
+            "name": "SaraTour",
+            "email": "sara.tour@gmail.com",
+            "password": "123456!#A",
+            "phoneNumber": "963258741",
+            "description": "Los mejor tours y los mas baratos en nuestra categoria",
+            "location": "Urb Barrio Nicolas de Pierola, San Martín de Porres, Lima, Perú",
+            "ruc": "84579615",
+            "photo": "https://cdn.domestika.org/c_limit,dpr_1.0,f_auto,q_auto,w_820/v1512850195/content-items/002/183/522/ASTOUR_P-original.jpg?1512850195",
+            "score": "5"
+        },
+        {   "id": "a2",
+            "name": "JhericoTour",
+            "email": "jherico.tour@gmail.com",
+            "password": "123456!#A",
+            "phoneNumber": "952004069",
+            "description": "Actividades en la playa y montaña, lo mejor de Perú",
+            "location": "Jirón Alexander Von Humboldt 496-558, Cercado de Lima 15033, Lima, Perú",
+            "ruc": "82315007",
+            "photo": "https://www.designevo.com/res/templates/thumb_small/black-circle-and-white-mountain.webp",
+            "score": "4"
+        }
+    ],
+    "customers": [
+        {
+            "id": "c1",
+            "name": "Alejandro",
+            "lastName": "Jacobo",
+            "email": "alejandro.jacobo@gmail.com",
+            "password": "123456!#A",
+            "phoneNumber": "963025991",
+            "photo": "https://i.pinimg.com/originals/1c/2e/32/1c2e320bc4301663b9f81e062b72ea69.jpg"
+        },
+        {
+            "id": "c2",
+            "name": "Heber",
+            "lastName": "Cordova Jimenez",
+            "email": "heber.cordova@gmail.com",
+            "password": "123456!#A",
+            "phoneNumber": "932145008",
+            "photo": "https://www.blogdelfotografo.com/wp-content/uploads/2020/02/apoyado6-2-scaled.jpg"
+        },
+        {
+            "id": "c3",
+            "name": "Jessica",
+            "lastName": "Soobin Joon",
+            "email": "jessica.soobin@gmail.com",
+            "password": "123456!#A",
+            "phoneNumber": "988004122",
+            "photo": "https://i.pinimg.com/originals/6d/3b/48/6d3b480a75c514692a4ba4e222d2031f.jpg"
+        },
+        {
+            "id": "c4",
+            "name": "Mabel",
+            "lastName": "Guzman",
+            "email": "mabel.guzman@gmail.com",
+            "password": "123456!#A",
+            "phoneNumber": "947881521",
+            "photo": "https://i.pinimg.com/564x/38/b6/34/38b63445b87a6f6167c55d5d426a26c3.jpg"
+        },
+        {
+            "id": "c5",
+            "name": "Esther",
+            "lastName": "Mendez A",
+            "email": "esther.mendez@gmail.com",
+            "password": "123456!#A",
+            "phoneNumber": "911044588",
+            "photo": "https://i.pinimg.com/originals/79/b7/99/79b799629300f8197c075adba4608ee4.jpg"
+        }
+    ],
+    "services": [
+        {
+            "id": "s1",
+            "name": "Full Day Ica para toda la familia",
+            "score": "5",
+            "price": "250",
+            "newPrice": "100",
+            "location": "Barrio 5 esquinas, Ica, Perú",
+            "creationDate": "25/01/2022",
+            "photos": "",
+            "description": "Disfruta de un full day en Ica, nos encontramos en oferta, precios accesibles [continuar...]",
+            "isOffer": "1",
+            "agencyId": "a1"
+        },
+        {
+            "id": "s2",
+            "name": "Paseos en lancha en la laguna de Lyto",
+            "score": "4",
+            "price": "300",
+            "newPrice": "100",
+            "location": "Barrio  esquinas, Lyto, Perú",
+            "creationDate": "7/04/2022",
+            "photos": "",
+            "description": "Disfruta de un hermosos paseo en lancha en la laguna Lyto, conoce las maravillas de... [continuar...]",
+            "isOffer": "0",
+            "agencyId": "a1"
+        },
+        {
+            "id": "s3",
+            "name": "Caminata en Apurimac, temporada de invierno listo para partir",
+            "score": "5",
+            "price": "340",
+            "newPrice": "100",
+            "location": "Invierno Nevado, Apurimac, Perú",
+            "creationDate": "09/12/2021",
+            "photos": "",
+            "description": "Disfruta en una tranquila caminata en el nevado en Apurimac... [continuar...]",
+            "isOffer": "0",
+            "agencyId": "a1"
+        },
+        {
+            "id": "s4",
+            "name": "Deporte extremo, rapel con nosotros",
+            "score": "3",
+            "price": "440",
+            "newPrice": "100",
+            "location": "Invierno Nevado, Junin, Perú",
+            "creationDate": "09/02/2022",
+            "photos": "",
+            "description": "Rapel, actividad no apta para todo público, procede con precaución [continuar...]",
+            "isOffer": "0",
+            "agencyId": "a1"
+        }
+    ],
+    "hiredServices": [
+        {
+            "id": "h1",
+            "amount": "200",
+            "price": "300",
+            "scheduledDate": "07/05/2022",
+            "status": "pendiente",
+            "customerId": "c1",
+            "serviceId": "s1"
+        },
+        {
+            "id": "h2",
+            "amount": "340",
+            "price": "340",
+            "scheduledDate": "10/05/2022",
+            "status": "pendiente",
+            "customerId": "c1",
+            "serviceId": "s2"
+        },
+        {
+            "id": "h3",
+            "amount": "250",
+            "price": "340",
+            "scheduledDate": "10/04/2022",
+            "status": "finalizado",
+            "customerId": "c2",
+            "serviceId": "s2"
+        },
+        {
+            "id": "h2",
+            "amount": "340",
+            "price": "340",
+            "scheduledDate": "10/05/2022",
+            "status": "pendiente",
+            "customerId": "c1",
+            "serviceId": "s2"
+        }
+    ]
+}
