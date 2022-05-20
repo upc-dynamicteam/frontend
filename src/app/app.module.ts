@@ -5,10 +5,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeModule } from "./Home/home.module";
 import { ServiciosDetallesModule } from "./ServiciosDetalles/servicios-detalles.module";
 import { AppRoutingModule } from "./app-routing.module";
+import { AgencyClientsComponent } from './agencyClients/pages/agency-clients/agency-clients.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AgencyClientsComponent,
   ],
   imports: [
       BrowserModule,
