@@ -1,0 +1,17 @@
+.container {
+    margin: 10px 10%;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+.agency-information {
+    order: 0;
+    flex: 1 2 auto;
+    align-self: flex-start;
+}
+.content {
+    order: 0;
+    flex: 9 1 auto;
+    align-self: flex-start;
+    margin: 0px 5px 0px 0px;
+}

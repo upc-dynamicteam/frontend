@@ -127,7 +127,7 @@
     "hiredServices": [
         {
             "id": "h1",
-            "amount": "200",
+            "amount": "2",
             "price": "300",
             "scheduledDate": "07/05/2022",
             "status": "pendiente",
@@ -136,7 +136,7 @@
         },
         {
             "id": "h2",
-            "amount": "340",
+            "amount": "3",
             "price": "340",
             "scheduledDate": "10/05/2022",
             "status": "pendiente",
@@ -145,7 +145,7 @@
         },
         {
             "id": "h3",
-            "amount": "250",
+            "amount": "2",
             "price": "340",
             "scheduledDate": "10/04/2022",
             "status": "finalizado",
@@ -153,13 +153,59 @@
             "serviceId": "s2"
         },
         {
-            "id": "h2",
-            "amount": "340",
-            "price": "340",
-            "scheduledDate": "10/05/2022",
+            "id": "h4",
+            "amount": "3",
+            "price": "350",
+            "scheduledDate": "20/07/2022",
             "status": "pendiente",
+            "customerId": "c3",
+            "serviceId": "s1"
+        }
+    ],
+    "agencyReviews": [
+        {
+            "id": "r1",
+            "date": "15/11/2020",
+            "comment": "Excelente agencia, muy pronto volveré a utilizarlo, sin duda lo recomiendo sobre otros",
+            "professionalismScore": "5",
+            "securityScore": "5",
+            "qualityScore": "5",
+            "costScore": "5",
+            "customerId": "c3",
+            "agencyId": "a1"
+        },
+        {
+            "id": "r2",
+            "date": "05/11/2021",
+            "comment": "Excelente agencia, lastima que sus precios son demasido elevados",
+            "professionalismScore": "5",
+            "securityScore": "5",
+            "qualityScore": "5",
+            "costScore": "2",
             "customerId": "c1",
-            "serviceId": "s2"
+            "agencyId": "a1"
+        },
+        {
+            "id": "r3",
+            "date": "22/10/2021",
+            "comment": "No me gustó la experiencia para nada, el personal es muy poco atento",
+            "professionalismScore": "2",
+            "securityScore": "4",
+            "qualityScore": "3",
+            "costScore": "5",
+            "customerId": "c5",
+            "agencyId": "a1"
+        },
+        {
+            "id": "r4",
+            "date": "15/11/2020",
+            "comment": "Recomendada sin duda alguna, no entiendo a que se debe los malos comentarios de otras personas",
+            "professionalismScore": "5",
+            "securityScore": "5",
+            "qualityScore": "5",
+            "costScore": "5",
+            "customerId": "c4",
+            "agencyId": "a1"
         }
     ]
 }

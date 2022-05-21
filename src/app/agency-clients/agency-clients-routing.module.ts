@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { TableClientsComponent } from "./components/table-clients/table-clients.component";
+import { AgencyClientsComponent } from "./pages/agency-clients/agency-clients.component";
 
 const routes: Routes = [
     {
         path: '',
         children: [
-            { path: '', component: TableClientsComponent }
+            { path: '', component: AgencyClientsComponent }
         ]
     }
 ]
-
 
 @NgModule({
     imports: [
