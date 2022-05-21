@@ -7,7 +7,7 @@ import {HiredService} from "../interfaces/hired-service";
   providedIn: 'root'
 })
 export class AgencyClientsService {
-    //Clients EndPoint
+    //HiredService EndPoint
     basePath = 'http://localhost:3000/api/v1/hiredServices'
     constructor(private http: HttpClient) { }
 
@@ -30,13 +30,50 @@ export class AgencyClientsService {
             );
         }
         // Return Observable with Error Message to Client
-        return throwError('Something happened with reques, please try again later');
+        return throwError('Something happened with request, please try again later');
     }
 
-    //Create Student
+    //Create HiredService
     create(createHiredServiceDto: HiredService): Observable<HiredService> {
         return this.http.post<HiredService>(this.basePath, JSON.stringify(createHiredServiceDto), this.httpOptions)
             .pipe(retry(2),
                 catchError(this.handleError));
     }
+
+    //Get HiredService by Id
+    getById(id: string): Observable<HiredService> {
+        return this.http.get<HiredService>(`${this.basePath}/${id}`)
+            .pipe(retry(2),
+                catchError(this.handleError));
+    }
+
+    //Get All HiredServices
+    getAll(): Observable<HiredService> {
+        return this.http.get<HiredService>(this.basePath)
+            .pipe(retry(2),
+                catchError(this.handleError));
+    }
+
+    //Get HiredService extend information by agencyId
+    getExtendInformation(agencyId: string, category: string): Observable<any> {
+        return this.http.get<any>(`http://localhost:3000/api/v1/agencies/${agencyId}/hiredServices?_expand=${category}`)
+            .pipe(retry(2),
+                catchError(this.handleError));
+    }
+
+    //Delete HiredService
+    delete(id: number) {
+        return this.http.delete(`${this.basePath}/${id}`, this.httpOptions)
+            .pipe(retry(2), catchError(this.handleError));
+    }
+
+    //Method provisional
+    /*
+    //Update HiredService
+    update(id: number, updateHiredServiceDto: HiredService): Observable<HiredService> {
+        return this.http.put<HiredService>(`${this.basePath}/${id}`, JSON.stringify(updateHiredServiceDto), this.httpOptions)
+            .pipe(retry(2),
+                catchError(this.handleError));
+    }
+    */
 }
