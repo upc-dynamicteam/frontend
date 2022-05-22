@@ -8,7 +8,7 @@
             "description": "Los mejor tours y los mas baratos en nuestra categoria",
             "location": "Urb Barrio Nicolas de Pierola, San Martín de Porres, Lima, Perú",
             "ruc": "84579615",
-            "photo": "https://cdn.domestika.org/c_limit,dpr_1.0,f_auto,q_auto,w_820/v1512850195/content-items/002/183/522/ASTOUR_P-original.jpg?1512850195",
+            "photo": "https://blogger.googleusercontent.com/img/a/AVvXsEg0EY-vzVNWrIWSCVN6TexubN3nBLWOTmWkmroEtmIVLQhVMzMJfpjq3uQvyDYX_Lw8kM1TGp1gPblzSViMTQzM9f_eeK2CSu2rzDSta8J3DgJum4m3HwX2U9zKhl7eDE9a3Cw4pBbIH8WDiTLrzwNBiidgZCot8t9Xg6enY7YWlvzbjvScdMXTYoD-7w=s16000",
             "score": "5"
         },
         {   "id": "a2",
@@ -139,7 +139,7 @@
             "amount": "3",
             "price": "340",
             "scheduledDate": "10/05/2022",
-            "status": "pendiente",
+            "status": "en progreso",
             "customerId": "c1",
             "serviceId": "s2"
         },

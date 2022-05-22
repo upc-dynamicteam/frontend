@@ -1,9 +1,5 @@
 <div class="container">
-    <div class="agency-information">
-        <mat-card>
-            <p>information</p>
-        </mat-card>
-    </div>
+    <app-agency-information class="agency-information"></app-agency-information>
     <div class="content">
         <mat-card>
             <h2>Servicios contratados</h2>
@@ -11,3 +7,18 @@
         </mat-card>
     </div>
 </div>
+
+<!--
+<div class="container-grid">
+    <mat-grid-list cols="11" rowHeight="600px">
+        <mat-grid-tile colspan="2">
+            <app-agency-information></app-agency-information>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="9">
+            <mat-card>
+                <h2>Servicios contratados</h2>
+                <app-table-clients></app-table-clients>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div> -->

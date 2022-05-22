@@ -8,9 +8,9 @@ import { Agency } from "../interfaces/agency";
 })
 export class AgenciesService {
     //Agencies EndPoint
-    basePath = 'https://fake-api-go2climb.herokuapp.com/agencies'
+    basePath = 'http://localhost:3000/api/v1/agencies'
 
-    constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
     //HTTP Default options
     httpOptions = {
@@ -62,7 +62,7 @@ export class AgenciesService {
     }
 
     //Update agency
-    update(id: string, updateAgencyDto: Agency): Observable<Agency> {
+    update(id: number, updateAgencyDto: Agency): Observable<Agency> {
         return this.http.put<Agency>(`${this.basePath}/${id}`, JSON.stringify(updateAgencyDto), this.httpOptions)
             .pipe(retry(2),
                 catchError(this.handleError));
