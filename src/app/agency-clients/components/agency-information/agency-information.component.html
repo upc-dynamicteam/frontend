@@ -1,0 +1,17 @@
+<mat-card style="text-align:center;">
+    <div class="circular--landscape">
+        <img [src] = "agencyData.photo" />
+    </div>
+    <div style="text-align: start;">
+        <h2 class="no-margin"><b>{{ agencyData.name }}</b></h2>
+        <p>{{ agencyData.email }}</p>
+        <p><i> {{ agencyData.description }} </i></p>
+        <p class="no-margin"><b>Ubicación:</b></p>
+        <p><i> {{ agencyData.location }} </i></p>
+        <p class="no-margin"><b>RUC:</b></p>
+        <p><i> {{ agencyData.ruc }} </i></p>
+        <p class="no-margin"><b>Teléfono:</b></p>
+        <p><i> {{ agencyData.phoneNumber }} </i></p>
+    </div>
+    <button mat-flat-button class="button-personalization">Editar información</button>
+</mat-card>

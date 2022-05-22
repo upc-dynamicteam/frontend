@@ -7,7 +7,7 @@ Run `npm install` to install all project dependencies.
 ##Project execution
 
 ###Json-server API deployment
-Run `cd server` and then `json-server --watch db.json --watch routes.json`. The application will execute the API.
+Run `cd server` and then `json-server --watch db.json --routes routes.json`. The application will execute the API.
 
 ### Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

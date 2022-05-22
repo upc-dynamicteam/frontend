@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
 import { catchError, Observable, retry, throwError } from "rxjs";
-import { HiredService } from "../interfaces/hired-service";
+import { Agency } from "../interfaces/agency";
 
 @Injectable({
   providedIn: 'root'
 })
-export class AgencyClientsService {
-    //HiredService EndPoint
-    basePath = 'http://localhost:3000/api/v1/hiredServices'
-    constructor(private http: HttpClient) { }
+export class AgenciesService {
+    //Agencies EndPoint
+    basePath = 'http://localhost:3000/api/v1/agencies'
+
+  constructor(private http: HttpClient) { }
 
     //HTTP Default options
     httpOptions = {
@@ -33,47 +34,37 @@ export class AgencyClientsService {
         return throwError('Something happened with request, please try again later');
     }
 
-    //Create HiredService
-    create(createHiredServiceDto: HiredService): Observable<HiredService> {
-        return this.http.post<HiredService>(this.basePath, JSON.stringify(createHiredServiceDto), this.httpOptions)
+    //Create agency
+    create(createAgencyDto: Agency): Observable<Agency> {
+        return this.http.post<Agency>(this.basePath, JSON.stringify(createAgencyDto), this.httpOptions)
             .pipe(retry(2),
                 catchError(this.handleError));
     }
 
-    //Get HiredService by Id
-    getById(id: string): Observable<HiredService> {
-        return this.http.get<HiredService>(`${this.basePath}/${id}`)
+    //Get agency by Id
+    getById(id: string): Observable<Agency> {
+        return this.http.get<Agency>(`${this.basePath}/${id}`)
             .pipe(retry(2),
                 catchError(this.handleError));
     }
 
-    //Get All HiredServices
-    getAll(): Observable<HiredService> {
-        return this.http.get<HiredService>(this.basePath)
+    //Get All agencies
+    getAll(): Observable<Agency> {
+        return this.http.get<Agency>(this.basePath)
             .pipe(retry(2),
                 catchError(this.handleError));
     }
 
-    //Get HiredService extend information by agencyId
-    getExtendInformation(agencyId: string, category: string): Observable<any> {
-        return this.http.get<any>(`http://localhost:3000/api/v1/agencies/${agencyId}/hiredServices?_expand=${category}`)
-            .pipe(retry(2),
-                catchError(this.handleError));
-    }
-
-    //Delete HiredService
+    //Delete agency
     delete(id: number) {
         return this.http.delete(`${this.basePath}/${id}`, this.httpOptions)
             .pipe(retry(2), catchError(this.handleError));
     }
 
-    //Method provisional
-    /*
-    //Update HiredService
-    update(id: number, updateHiredServiceDto: HiredService): Observable<HiredService> {
-        return this.http.put<HiredService>(`${this.basePath}/${id}`, JSON.stringify(updateHiredServiceDto), this.httpOptions)
+    //Update agency
+    update(id: number, updateAgencyDto: Agency): Observable<Agency> {
+        return this.http.put<Agency>(`${this.basePath}/${id}`, JSON.stringify(updateAgencyDto), this.httpOptions)
             .pipe(retry(2),
                 catchError(this.handleError));
     }
-    */
 }

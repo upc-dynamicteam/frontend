@@ -5,13 +5,16 @@
     column-gap: 20px;
 }
 .agency-information {
-    order: 0;
-    flex: 1 2 auto;
+    flex: 1 1 auto;
     align-self: flex-start;
+    max-width: 176px;
 }
 .content {
-    order: 0;
     flex: 9 1 auto;
     align-self: flex-start;
     margin: 0px 5px 0px 0px;
+    max-width: 82.5% !important;
+}
+.container-grid {
+    margin: 10px 10%;
 }
