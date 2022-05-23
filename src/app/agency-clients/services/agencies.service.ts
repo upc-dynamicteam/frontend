@@ -62,7 +62,7 @@ export class AgenciesService {
     }
 
     //Update agency
-    update(id: number, updateAgencyDto: Agency): Observable<Agency> {
+    update(id: string, updateAgencyDto: Agency): Observable<Agency> {
         return this.http.put<Agency>(`${this.basePath}/${id}`, JSON.stringify(updateAgencyDto), this.httpOptions)
             .pipe(retry(2),
                 catchError(this.handleError));

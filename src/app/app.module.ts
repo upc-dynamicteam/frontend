@@ -7,6 +7,7 @@ import { ServiciosDetallesModule } from "./ServiciosDetalles/servicios-detalles.
 import { AppRoutingModule } from "./app-routing.module";
 import { AgencyClientsModule } from "./agency-clients/agency-clients.module";
 import { HttpClientModule } from "@angular/common/http";
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from "@angular/common/http";
       AgencyClientsModule,
       BrowserAnimationsModule,
       AppRoutingModule,
-      HttpClientModule
+      HttpClientModule,
+      ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

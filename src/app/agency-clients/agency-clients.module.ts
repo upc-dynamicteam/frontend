@@ -17,6 +17,8 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
 import { AgencyInformationComponent } from './components/agency-information/agency-information.component';
 import {MatGridListModule} from "@angular/material/grid-list";
+import {MatInputModule} from "@angular/material/input";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import {MatGridListModule} from "@angular/material/grid-list";
         MatDialogModule,
         MatFormFieldModule,
         MatSelectModule,
-        MatGridListModule
+        MatGridListModule,
+        MatInputModule,
+        ReactiveFormsModule
     ]
 })
 export class AgencyClientsModule { }
