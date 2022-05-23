@@ -1,12 +1,12 @@
 # Go2Climb
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
 
-##Initialize the project
+## Initialize the project
 Run `npm install` to install all project dependencies.
 
-##Project execution
+## Project execution
 
-###Json-server API deployment
+### Json-server API deployment
 Run `cd server` and then `json-server --watch db.json --routes routes.json`. The application will execute the API.
 
 ### Development server
