@@ -8,10 +8,10 @@
             </div>
             <p class = "weight">Inicio</p>
         </div>
-        <form class = "form-search">
-            <input type="text" class="input-search">
+        <div class = "form-search">
+            <input type="text" class="input-search" (keypress)="search($event)">
             <i class="fa-solid fa-magnifying-glass icon-search"></i>
-        </form>
+        </div>
     </nav>
 </div>
 <app-options [show] = "value"></app-options>
