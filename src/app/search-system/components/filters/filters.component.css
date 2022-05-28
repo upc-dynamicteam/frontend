@@ -8,11 +8,10 @@ input {
     margin-bottom: 10px;
     font-size: 12px;
     padding: 6px;
-    width: 140px;
+    max-width: 65px;
 }
-.cost-text {
+.cost-text{
     display: flex;
-    flex-direction: column;
     gap: 5px;
 }
 p {
@@ -32,26 +31,6 @@ a {
     justify-items: center;
     gap: 10px;
 }
-.score-filters {
-    display: flex;
-    flex-direction: column;
-}
 .agency-score {
     margin-bottom: 10px;
-}
-
-@media only screen and (max-width: 875px) {
-    input {
-        width: 50%;
-    }
-    .cost-text {
-        flex-direction: row;
-    }
-    .score-filters {
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-    .agency-score {
-        width: 50%;
-    }
 }

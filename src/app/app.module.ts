@@ -8,24 +8,28 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AgencyClientsModule } from "./agency-clients/agency-clients.module";
 import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from "@angular/forms";
+import { MatIconModule } from "@angular/material/icon";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-      BrowserModule,
-      HomeModule,
-      BrowserAnimationsModule,
-      ServiciosDetallesModule,
-      AgencyClientsModule,
-      BrowserAnimationsModule,
-      AppRoutingModule,
-      HttpClientModule,
-      ReactiveFormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        HomeModule,
+        BrowserAnimationsModule,
+        ServiciosDetallesModule,
+        AgencyClientsModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        MatIconModule
+    ],
+    providers: [],
+    exports: [
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }

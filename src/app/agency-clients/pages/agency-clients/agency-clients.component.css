@@ -4,7 +4,7 @@
     justify-content: center;
     column-gap: 20px;
 }
-.agency-information {
+.side {
     flex: 1 1 auto;
     align-self: flex-start;
     max-width: 176px;

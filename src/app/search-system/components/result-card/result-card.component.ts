@@ -1,7 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Service} from "../../interfaces/service";
-import {AgenciesService} from "../../../agency-clients/services/agencies.service";
-import {Agency} from "../../../agency-clients/interfaces/agency";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-result-card',
@@ -9,21 +6,13 @@ import {Agency} from "../../../agency-clients/interfaces/agency";
   styleUrls: ['./result-card.component.css']
 })
 export class ResultCardComponent implements OnInit {
-    @Input() data!: Service;
-    agency!: Agency;
-
-  constructor(private agenciesService: AgenciesService) { }
+    isOffer = true;
+    rate = 5;
+  constructor() { }
   ngOnInit(): void {
-      this.getAgency();
   }
-  calc(n: string, t: number): Array<number> {
-      let x = Number(n);
-      if (t === 0) return Array(x);
-      else return Array(5 - x);
-  }
-  getAgency() {
-      this.agenciesService.getById(this.data.agencyId).subscribe((response: any) => {
-          this.agency = response;
-      })
+  calc(n: number, t: number): Array<number> {
+      if (t === 0) return Array(n);
+      else return Array(5 - n);
   }
 }

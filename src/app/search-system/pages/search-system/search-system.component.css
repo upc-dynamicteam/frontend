@@ -2,39 +2,16 @@
     margin: 10px 10%;
     display: flex;
     justify-content: center;
-    column-gap: 16px;
+    column-gap: 20px;
 }
 .side {
     flex: 1 1 auto;
     align-self: flex-start;
-    max-width: 152px;
-    margin-bottom: 10px;
+    max-width: 176px;
 }
 .content {
     flex: 9 1 auto;
     align-self: flex-start;
     margin: 0px 5px 0px 0px;
-}
-mat-card {
-    border-radius: 10px;
-}
-
-@media only screen and (max-width: 640px) {
-    .container {
-        margin: 10px 5%;
-    }
-}
-
-@media only screen and (max-width: 875px) {
-    .container {
-        flex-direction: column;
-    }
-    .side {
-        width: 95%;
-        max-width: 100%;
-    }
-    .content {
-        width: 95%;
-        max-width: 100%;
-    }
+    max-width: 82.5% !important;
 }
