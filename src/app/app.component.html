@@ -1,6 +1,6 @@
 <div class = "container">
     <div class="container-flex">
-        <app-navigation class = "navigate"></app-navigation>
+        <app-navigation (openSearch)="getSearch($event)" class = "navigate"></app-navigation>
         <router-outlet></router-outlet>
         <!--
         <div class = "content">

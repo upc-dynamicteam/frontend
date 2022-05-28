@@ -9,7 +9,8 @@
             <p class = "weight">Inicio</p>
         </div>
         <div class = "form-search">
-            <input type="text" class="input-search" (keypress)="search($event)">
+            <input type="text" class="input-search"
+                   (keypress)="search($event)" [(ngModel)]="text">
             <i class="fa-solid fa-magnifying-glass icon-search"></i>
         </div>
     </nav>

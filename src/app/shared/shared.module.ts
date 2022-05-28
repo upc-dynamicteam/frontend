@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import {HomeModule} from "../Home/home.module";
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -14,7 +15,8 @@ import {HomeModule} from "../Home/home.module";
     ],
     imports: [
         CommonModule,
-        HomeModule
+        HomeModule,
+        FormsModule
     ]
 })
 export class SharedModule { }

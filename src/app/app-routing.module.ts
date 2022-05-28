@@ -17,7 +17,7 @@ const routes: Routes = [
         loadChildren: () => import('./agency-clients/agency-clients.module').then(m => m.AgencyClientsModule )
     },
     {
-        path: 'search',
+        path: 'search/:text',
         loadChildren: () => import('./search-system/search-system.module').then(m => m.SearchSystemModule )
     },
     { path: '**', redirectTo: 'home', pathMatch: 'full' }

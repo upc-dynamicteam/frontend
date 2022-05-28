@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent {
+    @Output() openSearch = new EventEmitter<string>();
+
     value: boolean = false;
+    text: string = '';
 
     change(): void{
         this.value = !this.value
@@ -19,7 +22,7 @@ export class NavigationComponent {
     search(event: any) {
         const charCode = (event.which)?event.which: event.keyCode;
         if(charCode == 13) {
-            console.log("buscar");
+            this.openSearch.emit(this.text);
         }
     }
 
