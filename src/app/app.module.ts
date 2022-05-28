@@ -9,6 +9,7 @@ import { AgencyClientsModule } from "./agency-clients/agency-clients.module";
 import { HttpClientModule } from "@angular/common/http";
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatIconModule } from "@angular/material/icon";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import { MatIconModule } from "@angular/material/icon";
         AppRoutingModule,
         HttpClientModule,
         ReactiveFormsModule,
-        MatIconModule
+        MatIconModule,
+        SharedModule
     ],
     providers: [],
     exports: [

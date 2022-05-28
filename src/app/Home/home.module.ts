@@ -28,16 +28,17 @@ import {HomeRoutingModule} from "./homeRouting.module";
       RegisterAgencyComponent,
       HomePageComponent
   ],
-  exports: [
-      MainPageComponent,
-      NavigateComponent,
+    exports: [
+        MainPageComponent,
+        NavigateComponent,
 
-      SidebarComponent,
+        SidebarComponent,
 
-      SidebarComponent,
-      HomePageComponent,
-      HomeRoutingModule
-  ],
+        SidebarComponent,
+        HomePageComponent,
+        HomeRoutingModule,
+        OptionsComponent
+    ],
     imports: [
         CommonModule,
         MatIconModule

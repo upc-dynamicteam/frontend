@@ -1,38 +1,18 @@
-import {Component, Output, EventEmitter, OnDestroy, ChangeDetectorRef, OnInit} from '@angular/core';
-import {MediaMatcher} from '@angular/cdk/layout';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css']
 })
-export class NavigationComponent implements OnInit, OnDestroy{
-    @Output() openSearch = new EventEmitter<string>();
-    text: string = '';
-    mobileQuery: MediaQueryList;
-    photo: string = '';
+export class NavigationComponent {
+    value: boolean = false;
 
-    private readonly _mobileQueryListener: () => void;
-
-    constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
-        this.mobileQuery = media.matchMedia('(max-width: 600px)');
-        this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-        this.mobileQuery.addEventListener('change', this._mobileQueryListener);
+    change(): void{
+        this.value = !this.value
     }
 
-    ngOnInit() {
-        /*Cambiar a la foto del usuario registrado*/
-        this.photo = 'https://yt3.ggpht.com/ytc/AKedOLQMSrgxItPwy1gW4nke8tyEXNImWjwt3upFTg7g=s900-c-k-c0x00ffffff-no-rj';
-    }
-
-    ngOnDestroy(): void {
-        this.mobileQuery.removeEventListener('change', this._mobileQueryListener);
-    }
-
-    search(event: any) {
-        const charCode = (event.which)?event.which: event.keyCode;
-        if(charCode == 13) {
-            this.openSearch.emit(this.text);
-        }
+    login(): void {
+        let element = document.getElementById("")
     }
 }
