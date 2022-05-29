@@ -1,0 +1,12 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    margin: 70px 30px 0 60px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.left-align {
+    text-align: left;
+}

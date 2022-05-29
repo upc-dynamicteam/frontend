@@ -1,0 +1,36 @@
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input {
+    border: 1px #e3e3e3 solid;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    padding: 6px;
+    max-width: 65px;
+}
+.cost-text{
+    display: flex;
+    gap: 5px;
+}
+p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.icon {
+    color: #ffd156;
+    font-size: 1.7rem;
+    width: auto;
+}
+a {
+    cursor: pointer;
+}
+.flex {
+    display: flex;
+    justify-items: center;
+    gap: 10px;
+}
+.agency-score {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,16 @@
+<div class = "container">
+    <div class="container-flex">
+        <app-navigation  (openSearch)="getSearch($event)"  class = "navigate"></app-navigation>
+        <router-outlet></router-outlet>
+        <!--
+        <div class = "content">
+            <div class = "sidebar">
+                <app-sidebar></app-sidebar>
+            </div>
+            <div class = "mainPage">
+                <app-main-page></app-main-page>
+            </div>
+        </div> -->
+    </div>
+</div>
+

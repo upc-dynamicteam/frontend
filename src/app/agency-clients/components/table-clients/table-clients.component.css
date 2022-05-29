@@ -1,0 +1,13 @@
+table {
+    width: 100%;
+    border: #CDCDCD solid 1px;
+}
+.mat-button {
+    border: #EDEDED solid 1px;
+}
+.mat-panel {
+    width: 100%;
+}
+.mat-table-clients {
+    margin: 0;
+}

@@ -1,0 +1,80 @@
+<h2>Filtros</h2>
+<!--Precios-->
+<form (submit)="onSubmit()" [formGroup]="priceForm">
+    <p>Precio</p>
+    <div class="cost-text">
+        <input type="number" formControlName="lowestPrice" placeholder="Precio min"/> -
+        <input type="number" formControlName="highestPrice" placeholder="Precio max"/>
+    </div>
+    <div class="agency-score">
+        <p>Puntuación de la agencia</p>
+        <a class="flex">
+            <div><mat-icon class="icon" *ngFor="let i of calc(5, 0);">star</mat-icon></div>
+            <span>o más</span>
+        </a>
+        <a class="flex">
+            <div>
+                <mat-icon class="icon" *ngFor="let i of calc(4, 0);">star</mat-icon>
+                <mat-icon class="icon" *ngFor="let i of calc(4, 1);">star_border</mat-icon>
+            </div>
+            <span>o más</span>
+        </a>
+        <a class="flex">
+            <div>
+                <mat-icon class="icon" *ngFor="let i of calc(3, 0);">star</mat-icon>
+                <mat-icon class="icon" *ngFor="let i of calc(3, 1);">star_border</mat-icon>
+            </div>
+            <span>o más</span>
+        </a>
+        <a class="flex">
+            <div>
+                <mat-icon class="icon" *ngFor="let i of calc(2, 0);">star</mat-icon>
+                <mat-icon class="icon" *ngFor="let i of calc(2, 1);">star_border</mat-icon>
+            </div>
+            <span>o más</span>
+        </a>
+        <a class="flex">
+            <div>
+                <mat-icon class="icon" *ngFor="let i of calc(1, 0);">star</mat-icon>
+                <mat-icon class="icon" *ngFor="let i of calc(1, 1);">star_border</mat-icon>
+            </div>
+            <span>o más</span>
+        </a>
+    </div>
+    <div class="service-score">
+        <p>Puntuación del servicio</p>
+        <a class="flex">
+            <div><mat-icon class="icon" *ngFor="let i of calc(5, 0);">star</mat-icon></div>
+            <span>o más</span>
+        </a>
+        <a class="flex">
+            <div>
+                <mat-icon class="icon" *ngFor="let i of calc(4, 0);">star</mat-icon>
+                <mat-icon class="icon" *ngFor="let i of calc(4, 1);">star_border</mat-icon>
+            </div>
+            <span>o más</span>
+        </a>
+        <a class="flex">
+            <div>
+                <mat-icon class="icon" *ngFor="let i of calc(3, 0);">star</mat-icon>
+                <mat-icon class="icon" *ngFor="let i of calc(3, 1);">star_border</mat-icon>
+            </div>
+            <span>o más</span>
+        </a>
+        <a class="flex">
+            <div>
+                <mat-icon class="icon" *ngFor="let i of calc(2, 0);">star</mat-icon>
+                <mat-icon class="icon" *ngFor="let i of calc(2, 1);">star_border</mat-icon>
+            </div>
+            <span>o más</span>
+        </a>
+        <a class="flex">
+            <div>
+                <mat-icon class="icon" *ngFor="let i of calc(1, 0);">star</mat-icon>
+                <mat-icon class="icon" *ngFor="let i of calc(1, 1);">star_border</mat-icon>
+            </div>
+            <span>o más</span>
+        </a>
+    </div>
+</form>
+

@@ -1,0 +1,38 @@
+<mat-card>
+    <div class="divider">
+        <div class="image">
+            <img class="image-style"
+                 [src]="data.photos">
+        </div>
+        <mat-card-content class="content">
+            <mat-card-title>{{data.name}}</mat-card-title>
+
+            <!--Service rate-->
+            <mat-icon class="icon-service"
+                      *ngFor="let i of calc(data.score, 0);">star</mat-icon>
+            <mat-icon class="icon-service"
+                      *ngFor="let i of calc(data.score, 1);">star_border</mat-icon>
+
+            <div class="by">
+                <p>por <a><b>{{agency.name}}</b></a></p>
+                <!--Agency rate-->
+                <div>
+                    <mat-icon class="icon-agency"
+                              *ngFor="let i of calc(agency.score, 0);">star</mat-icon>
+                    <mat-icon class="icon-agency"
+                              *ngFor="let i of calc(agency.score, 1);">star_border</mat-icon>
+                </div>
+            </div>
+
+            <!--Text if this an offer-->
+            <div *ngIf="data.isOffer">
+                <span class="price"><del>${{data.price}}.00</del></span>
+                <span class="price">${{data.newPrice}}.00</span>
+            </div>
+            <!--Text if this not an offer-->
+            <div *ngIf="!data.isOffer">
+                <span class="price">${{data.price}}.00</span>
+            </div>
+        </mat-card-content>
+    </div>
+</mat-card>

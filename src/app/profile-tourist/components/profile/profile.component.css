@@ -1,0 +1,43 @@
+.container{
+    background-color: white;
+    width: 173px;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 20px;
+}
+.img-icon {
+    height: 124px;
+    width: 124px;
+    margin-left: 23px;
+    border-radius: 62px;
+    border: 2px solid #0D99FF;
+}
+p{
+    font-size: 16px;
+}
+.p-12{
+    font-size: 12px;
+}
+.btn{
+    cursor: pointer;
+    width: 141px;
+    height: 32px;
+    border-radius: 15px;
+    border: none;
+    background-color: #9CD4E7;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.weight{
+    font-weight: bold;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+.user-info {
+    margin-top: 10px;
+}
+.user-info p{
+    margin: 0;
+}

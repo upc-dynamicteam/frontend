@@ -1,0 +1,10 @@
+.reviews-card {
+  margin: auto;
+  border-radius: 2%;
+  max-width: 90%;
+  margin-top: 20px;
+}
+.profile-image {
+  background-image: url('https://picsum.photos/200/600');
+  background-size: cover;
+}

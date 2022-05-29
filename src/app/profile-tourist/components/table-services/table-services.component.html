@@ -1,0 +1,49 @@
+<main class = "container">
+    <h1>Servicios Contratados</h1>
+    <section class = "container-table">
+        <div class = "container-column">
+            <p>Información del servicio</p>
+        </div>
+        <div class = "container-column">
+            <p>Estado del servicio</p>
+        </div>
+        <div class = "container-column">
+            <p>Acciones del servicio</p>
+        </div>
+    </section>
+    <section class = "container-table-info" *ngIf = "servicesUser.length > 0; else noServices">
+        <article class = "article-table" *ngFor = "let service of servicesUser">
+            <div class = "article-table-data">
+                <div class="article-table-data-info">
+                    <p>Número del servicio: {{service.numberService}}</p>
+                    <p>Hora y fecha de la solicitud: {{service.dateService}}</p>
+                </div>
+                <div class="article-table-data-info">
+                    <p>Agencia: {{service.agencie}}</p>
+                </div>
+                <div class="article-table-data-info">
+                    <p>Importe total: </p>
+                    <p class = "weight">$ {{service.importTotal}}</p>
+                </div>
+            </div> <!-- Fin de article table data -->
+            <div class = "article-table-data-extra">
+                <div class = "article-table-data-extra-info flex">
+                    <img src="{{service.img}}" alt="" class = "img-service">
+                    <p class = "ml-10">{{service.infoService}}</p>
+                </div>
+                <div class = "article-table-data-extra-info">
+                    <p>{{service.state}}</p>
+                </div>
+                <div class = "article-table-data-extra-info">
+                    <button class = "btn">Calificar Servicio</button>
+                </div>
+            </div>
+        </article>
+    </section>
+    <ng-template #noServices>
+        <div class="flex-center">
+            <i class="fa-solid fa-box-open"></i>
+        </div>
+        <p class  = "noServices">Usted aún no cuenta con servicios contratados, descubre Go2climb y empieza el viaje de tu vida</p>
+    </ng-template>
+</main>

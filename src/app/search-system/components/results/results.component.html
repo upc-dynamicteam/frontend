@@ -1,0 +1,4 @@
+<p>Se encontraron <b>{{services.length}}</b> coincidencias para <b>{{text}}</b></p>
+<div class="card-result" *ngFor="let service of services">
+    <app-result-card [data]="service"></app-result-card>
+</div>
