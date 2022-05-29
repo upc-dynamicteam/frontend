@@ -3,7 +3,6 @@ import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import {LoginComponent} from "../../page/login/login.component";
 import {AcencySigninComponent} from "../../page/acency-signin/acency-signin.component";
 import {UserSigninComponent} from "../../page/user-signin/user-signin.component";
-import {PayServiceComponent} from "../../page/pay-service/pay-service.component";
 
 @Component({
   selector: 'app-menu',
@@ -21,8 +20,5 @@ export class MenuComponent {
   }
   openUserSignIn() {
     const dialogRef = this.dialog.open(UserSigninComponent, {restoreFocus: false});
-  }
-  openPayService() {
-    const dialogRef = this.dialog.open(PayServiceComponent, {restoreFocus: false});
-  }
+}
 }

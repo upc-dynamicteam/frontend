@@ -34,7 +34,6 @@ import {MatCardModule} from "@angular/material/card";
 import { EmailPageComponent } from './home/page/recover-password/email-page/email-page.component';
 import { CodePageComponent } from './home/page/recover-password/code-page/code-page.component';
 import { PasswordPageComponent } from './home/page/recover-password/password-page/password-page.component';
-import { PayServiceComponent } from './home/page/pay-service/pay-service.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +51,6 @@ import { PayServiceComponent } from './home/page/pay-service/pay-service.compone
     EmailPageComponent,
     CodePageComponent,
     PasswordPageComponent,
-    PayServiceComponent,
   ],
     imports: [
         BrowserModule,

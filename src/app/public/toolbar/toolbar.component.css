@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.bg-color {
+  background-color: #9CD4E7;
+}
+
+.is-mobile .toolbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 9.15%;
+  z-index: 2;
+}
+.img-icon{
+  margin-left: 30%;
+  width: 142px;
+  height: auto;
+}
+.nav-main-info{
+  display: flex;
+  width: 400px;
+  justify-content: space-around;
+  align-items: center;
+}
+.container-options{
+  display: flex;
+  background-color: white;
+  width: 85px;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 21px;
+  position: relative;
+  cursor: pointer;
+  padding: 3px 13px 3px 3px;
+  box-sizing: border-box;
+}
+.container-options-img{
+  width: 28px;
+  height: 28px;
+  border-radius: 148.5px;
+}
+.input-search{
+  width: 392px;
+  height: 35px;
+  border-radius: 21px;
+  border: none;
+}
+.form-search{
+  margin-left: 30%;
+  position: relative;
+}
+.icon-search{
+  position: absolute;
+  top: 10px;
+  right: 360px;
+  color: grey;
+}
+.title{
+  position: absolute;
+  margin-left: 35%;
+}
+
+.h4 {
+  font-weight: bold;
+  margin: 0;
+}
+
+.is-mobile .sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
