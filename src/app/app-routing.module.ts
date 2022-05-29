@@ -18,7 +18,8 @@ const routes: Routes = [
     },
     {
         path: 'search/:text',
-        loadChildren: () => import('./search-system/search-system.module').then(m => m.SearchSystemModule )
+        loadChildren: () => import('./search-system/search-system.module').then(m => m.SearchSystemModule ),
+        runGuardsAndResolvers: 'paramsOrQueryParamsChange'
     },
     { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
@@ -26,7 +27,7 @@ const routes: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot( routes )
+        RouterModule.forRoot( routes, {onSameUrlNavigation: 'reload'} )
     ],
     exports: [
         RouterModule

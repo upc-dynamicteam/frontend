@@ -10,7 +10,7 @@ export class AgenciesService {
     //Agencies EndPoint
     basePath = 'http://localhost:3000/api/v1/agencies'
 
-  constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient) { }
 
     //HTTP Default options
     httpOptions = {

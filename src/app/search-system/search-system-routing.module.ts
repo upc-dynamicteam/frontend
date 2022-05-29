@@ -7,7 +7,8 @@ const routes: Routes = [
         path: '',
         children: [
             { path: '', component: SearchSystemComponent}
-        ]
+        ],
+        runGuardsAndResolvers: 'paramsOrQueryParamsChange'
     }
 ];
 

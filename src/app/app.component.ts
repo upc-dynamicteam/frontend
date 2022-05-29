@@ -14,5 +14,6 @@ export class AppComponent {
 
   getSearch(e: any) {
       this.router.navigate([`search/${e}`]);
+
   }
 }
