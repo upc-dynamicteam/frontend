@@ -1,0 +1,44 @@
+<mat-dialog-content>
+  <div class="container">
+
+    <h2>Pagar servicio</h2>
+    <mat-divider></mat-divider>
+
+    <h3>Servicio seleccionado</h3>
+
+    <h3>Método de pago</h3>
+
+    <form class="form">
+      <table class="full-width">
+        <tr>
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Número de tarjeta</mat-label>
+            <input matInput required>
+          </mat-form-field>
+        </tr>
+        <tr>
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Nombre del titular de la cuenta</mat-label>
+            <input matInput required>
+          </mat-form-field>
+        </tr>
+      </table>
+
+      <table class="full-width"><tr>
+        <td><mat-form-field appearance="fill">
+          <mat-label>MM/AA</mat-label>
+          <input matInput required>
+        </mat-form-field></td>
+        <td><mat-form-field appearance="fill">
+          <mat-label>CVC/CVV</mat-label>
+          <input matInput required>
+        </mat-form-field></td>
+      </tr></table>
+    </form>
+
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="center">
+  <button mat-raised-button color="primary" mat-dialog-close="">Continuar</button>
+</mat-dialog-actions>

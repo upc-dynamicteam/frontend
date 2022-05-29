@@ -1,12 +1,13 @@
-<div class="content-sidebar">
-    <div class="categories">
-        <p class = "weight line">Categorias</p>
-        <p>Ofertas del día</p>
-        <p>Los más populares</p>
-        <p>Para ti</p>
-    </div>
-    <div class="flights mt-20">
-        <p class = "weight line">Vuelos</p>
-        <p>Ofertas de vuelos</p>
-    </div>
+<div class="content">
+  <mat-selection-list #shoes [multiple]="false">
+    <div mat-subheader>Categorías</div>
+    <mat-list-item *ngFor="let categorie of categories">
+      <button class="left-align" mat-flat-button mat-line>{{categorie.name}}</button>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <div mat-subheader>Vuelos</div>
+    <mat-list-item *ngFor="let flight of flights">
+      <button class="left-align" mat-flat-button mat-line>{{flight.name}}</button>
+    </mat-list-item>
+  </mat-selection-list>
 </div>

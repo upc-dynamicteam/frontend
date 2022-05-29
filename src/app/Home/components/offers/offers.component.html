@@ -1,16 +1,15 @@
 <div class="container-general-offers">
-    <h1 class = "title">Ofertas del día</h1>
-    <div class="container-offers">
-        <article *ngFor=" let element of listOffers">
-            <div class="element-offer">
-                <img src="{{element.imgUrl}}" alt="" class = "img-card">
-                <p class = "element-description">{{element.description}}</p>
-                <img src="../../../../assets/img/starts.PNG" alt="">
-                <div class="container-prices">
-                    <p>${{element.priceNormal.toFixed(2)}}</p>
-                    <p>${{element.priceOffer.toFixed(2)}}</p>
-                </div>
-            </div>
-        </article>
-    </div>
+  <h1 class = "title">Ofertas del día</h1>
+  <div class="container-offers">
+    <mat-card class="no-border" *ngFor="let element of listOffers">
+      <div class="element-offer">
+        <img class="img-card" src="{{element.imgUrl}}" alt="">
+        <mat-card-subtitle class = "element-description">{{element.description}}</mat-card-subtitle>
+        <mat-card-content class="container-prices">
+          <p>${{element.priceNormal.toFixed(2)}}</p>
+          <p>${{element.priceOffer.toFixed(2)}}</p>
+        </mat-card-content>
+      </div>
+    </mat-card>
+  </div>
 </div>

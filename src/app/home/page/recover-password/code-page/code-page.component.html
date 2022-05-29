@@ -1,0 +1,21 @@
+<mat-dialog-content>
+  <div class="container">
+
+    <h2>Recuperar contraseña</h2>
+    <mat-divider></mat-divider>
+
+    <h3>Ingrese el código de recuperación.</h3>
+
+    <form class="form">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Código</mat-label>
+        <input matInput placeholder="12345" [formControl]="code">
+      </mat-form-field>
+    </form>
+
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button (click)="codeButtonForm()" mat-raised-button color="primary" mat-dialog-close="">Validar</button>
+</mat-dialog-actions>

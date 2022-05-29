@@ -10,7 +10,7 @@ describe('PopularComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ PopularComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
