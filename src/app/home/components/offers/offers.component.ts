@@ -1,8 +1,5 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {ServiceOffer} from "../../models/ServiceOffer";
-import {Offer} from "../../models/Offer";
-import {OffersService} from "../../service/offers.service";
-import {MatTableDataSource} from "@angular/material/table";
 
 @Component({
   selector: 'app-offers',
@@ -11,25 +8,11 @@ import {MatTableDataSource} from "@angular/material/table";
 })
 export class OffersComponent implements OnInit, AfterViewInit {
 
-  offerData: Offer;
-  dataSource: MatTableDataSource<any>;
+  constructor() {}
 
-  constructor(private offersService: OffersService) {
-    this.offerData = {} as Offer;
-    this.dataSource = new MatTableDataSource<any>();
-  }
-
-  ngOnInit(): void {
-    this.getAllOffers();
-  }
+  ngOnInit(): void {}
 
   ngAfterViewInit() { }
-
-  getAllOffers() {
-    this.offersService.getAll().subscribe((response: any) =>{
-      this.dataSource.data = response;
-    })
-  }
 
   listOffers: ServiceOffer[] = [
     {
