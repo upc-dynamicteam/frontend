@@ -10,7 +10,7 @@
       <table class="full-width"><tr>
         <td><mat-form-field appearance="fill">
           <mat-label>Correo</mat-label>
-          <!--<input matInput placeholder="nombre@example.com" [formControl]="email" required>-->
+          <input matInput placeholder="nombre@example.com" [formControl]="email" required>
           <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
         </mat-form-field></td>
         <td><mat-form-field appearance="fill">
