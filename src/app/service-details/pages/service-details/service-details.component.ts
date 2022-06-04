@@ -3,8 +3,8 @@ import {DatePipe} from "@angular/common";
 
 @Component({
   selector: 'app-serviceDetails',
-  templateUrl: './serviceDetails.component.html',
-  styleUrls: ['./serviceDetails.component.css']
+  templateUrl: './service-details.component.html',
+  styleUrls: ['./service-details.component.css']
 })
 export class ServiceDetailsComponent implements OnInit {
   title = 'Service Details';

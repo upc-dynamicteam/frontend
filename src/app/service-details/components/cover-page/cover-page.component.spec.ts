@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { ServiceDetailsComponent } from './serviceDetails.component';
+import { CoverPageComponent } from './cover-page.component';
 
-describe('serviceDetailsComponent', () => {
-  let component : ServiceDetailsComponent;
-  let fixture : ComponentFixture<ServiceDetailsComponent>;
+describe('coverPageComponent', () => {
+  let component : CoverPageComponent;
+  let fixture : ComponentFixture<CoverPageComponent>;
 
   beforeEach(async ()=>{
     await TestBed.configureTestingModule({
-      declarations: [ServiceDetailsComponent]
+      declarations: [CoverPageComponent]
     })
       .compileComponents();
   });
 
   beforeEach(()=>{
-    fixture=TestBed.createComponent(ServiceDetailsComponent);
+    fixture=TestBed.createComponent(CoverPageComponent);
     component=fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -6,7 +6,7 @@ import {OffersComponent} from "./components/offers/offers.component";
 import {SidebarComponent} from "./components/sidebar/sidebar.component";
 import {MainPageComponent} from "./components/main-page/main-page.component";
 import {HomePageComponent} from "./pages/home-page/home-page.component";
-import {HomeRoutingModule} from "./homeRouting.module";
+import {HomeRoutingModule} from "./home.routing.module";
 import {MenuComponent} from "./components/menu/menu.component";
 
 // Material
@@ -24,7 +24,7 @@ import {MatListModule} from "@angular/material/list";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatButtonModule} from "@angular/material/button";
 import {MatToolbarModule} from "@angular/material/toolbar";
-import {AcencySigninComponent} from "./components/acency-signin/acency-signin.component";
+import {AgencySigninComponent} from "./components/agency-signin/agency-signin.component";
 import {UserSigninComponent} from "./components/user-signin/user-signin.component";
 import {CodePageComponent} from "./components/recover-password/code-page/code-page.component";
 import {EmailPageComponent} from "./components/recover-password/email-page/email-page.component";
@@ -35,7 +35,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
-      AcencySigninComponent,
+      AgencySigninComponent,
       UserSigninComponent,
       CodePageComponent,
       EmailPageComponent,

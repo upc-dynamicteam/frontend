@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {ServiceNormal} from "../../interfaces/ServiceNormal";
-import {ServiceOffer} from "../../interfaces/ServiceOffer";
+import {ServiceNormal} from "../../interfaces/service-normal";
+import {ServiceOffer} from "../../interfaces/service-offer";
 
 @Component({
   selector: 'app-services-list',

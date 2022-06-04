@@ -3,10 +3,10 @@ import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-acency-signin',
-  templateUrl: './acency-signin.component.html',
-  styleUrls: ['./acency-signin.component.css'],
+  templateUrl: './agency-signin.component.html',
+  styleUrls: ['./agency-signin.component.css'],
 })
-export class AcencySigninComponent implements OnInit {
+export class AgencySigninComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}

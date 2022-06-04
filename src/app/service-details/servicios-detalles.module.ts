@@ -1,10 +1,10 @@
 import {NgModule} from "@angular/core";
 import {CommonModule, DatePipe} from "@angular/common";
 import {MatIconModule} from "@angular/material/icon";
-import {CoverPageComponent} from "./components/coverPage/coverPage.component";
+import {CoverPageComponent} from "./components/cover-page/cover-page.component";
 import {InformationComponent} from "./components/information/information.component";
 import {ReviewsComponent} from "./components/reviews/reviews.component";
-import {ServiceDetailsComponent} from "./pages/serviceDetails/serviceDetails.component";
+import {ServiceDetailsComponent} from "./pages/service-details/service-details.component";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatCardModule} from "@angular/material/card";
 import {MatGridListModule} from "@angular/material/grid-list";

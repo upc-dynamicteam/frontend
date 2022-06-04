@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ReviewsCommentaries} from "../../interfaces/ReviewsCommentaries";
+import {ReviewsCommentaries} from "../../interfaces/reviews-commentaries";
 
 @Component({
   selector: 'app-reviews',

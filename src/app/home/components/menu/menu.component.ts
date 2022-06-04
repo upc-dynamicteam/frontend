@@ -1,7 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { LoginComponent} from "../login/login.component";
-import { AcencySigninComponent } from '../acency-signin/acency-signin.component';
+import { AgencySigninComponent } from '../agency-signin/agency-signin.component';
 import { UserSigninComponent } from '../user-signin/user-signin.component';
 
 @Component({
@@ -15,7 +15,7 @@ export class MenuComponent {
     const dialogRef = this.dialog.open(LoginComponent, { restoreFocus: false });
   }
   openAgencySignIn() {
-    const dialogRef = this.dialog.open(AcencySigninComponent, {
+    const dialogRef = this.dialog.open(AgencySigninComponent, {
       restoreFocus: false,
     });
   }

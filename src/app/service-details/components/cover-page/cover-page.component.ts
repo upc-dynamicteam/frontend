@@ -3,11 +3,11 @@ import {DatePipe} from "@angular/common";
 
 @Component({
   selector: 'app-coverPage',
-  templateUrl: './coverPage.component.html',
-  styleUrls: ['./coverPage.component.css']
+  templateUrl: './cover-page.component.html',
+  styleUrls: ['./cover-page.component.css']
 })
 export class CoverPageComponent implements OnInit {
-  title = 'coverPage';
+  title = 'cover-page';
   images: Gallery[] = [];
 
   ngOnInit() :void {

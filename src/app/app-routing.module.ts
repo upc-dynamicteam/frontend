@@ -6,11 +6,11 @@ const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     {
         path: 'home',
-        loadChildren: () => import('./Home/home.module').then(m => m.HomeModule )
+        loadChildren: () => import('./home/home.module').then(m => m.HomeModule )
     },
     {
         path: 'servicio',
-        loadChildren: () => import('./ServiciosDetalles/servicios-detalles.module').then(m => m.ServiciosDetallesModule )
+        loadChildren: () => import('./service-details/servicios-detalles.module').then(m => m.ServiciosDetallesModule )
     },
     {
         path: 'clients',
