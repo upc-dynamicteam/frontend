@@ -12,6 +12,7 @@
     width: 100%;
     margin: 0 9.15%;
 }
+
 .bg-color {
     background-color: #9CD4E7;
 }
@@ -49,7 +50,8 @@
     border-radius: 148.5px;
 }
 
-.input-search{
+.input-search {
+    font-size: 14px;
     width: 392px;
     height: 35px;
     color: #888;
@@ -70,6 +72,7 @@
     top: 30%;
     right: 93%;
     color: #acacac;
+    font-size: 15px;
 }
 
 .weight{
