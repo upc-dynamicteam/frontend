@@ -5,6 +5,7 @@ import {HomeModule} from "../home/home.module";
 import {FormsModule} from "@angular/forms";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {NavigationComponent} from "./components/navigation/navigation.component";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import {NavigationComponent} from "./components/navigation/navigation.component"
         RouterModule,
         CommonModule,
         HomeModule,
-        FormsModule
+        FormsModule,
+        MatIconModule
     ]
 })
 

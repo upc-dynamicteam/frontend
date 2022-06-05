@@ -1,4 +1,4 @@
-import {Component, Output, EventEmitter, OnDestroy, ChangeDetectorRef} from '@angular/core';
+import {Component, Output, EventEmitter, OnDestroy, ChangeDetectorRef, OnInit} from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
 
 @Component({
@@ -6,10 +6,11 @@ import {MediaMatcher} from '@angular/cdk/layout';
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css']
 })
-export class NavigationComponent implements OnDestroy{
+export class NavigationComponent implements OnInit, OnDestroy{
     @Output() openSearch = new EventEmitter<string>();
     text: string = '';
     mobileQuery: MediaQueryList;
+    photo: string = '';
 
     private readonly _mobileQueryListener: () => void;
 
@@ -19,14 +20,19 @@ export class NavigationComponent implements OnDestroy{
         this.mobileQuery.addEventListener('change', this._mobileQueryListener);
     }
 
+    ngOnInit() {
+        /*Cambiar a la foto del usuario registrado*/
+        this.photo = 'https://yt3.ggpht.com/ytc/AKedOLQMSrgxItPwy1gW4nke8tyEXNImWjwt3upFTg7g=s900-c-k-c0x00ffffff-no-rj';
+    }
+
     ngOnDestroy(): void {
         this.mobileQuery.removeEventListener('change', this._mobileQueryListener);
     }
+
     search(event: any) {
         const charCode = (event.which)?event.which: event.keyCode;
         if(charCode == 13) {
             this.openSearch.emit(this.text);
         }
     }
-
 }

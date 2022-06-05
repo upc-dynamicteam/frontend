@@ -1,14 +1,16 @@
-<div class = "container" [class.is-mobile]="mobileQuery.matches">
+<div class = "container bg-color" [class.is-mobile]="mobileQuery.matches">
     <mat-toolbar class = "nav bg-color">
         <div class="nav-main-info">
             <img [routerLink]="['/home']"  src="../../../../assets/img/Icon.png" alt="Logo Go2Climb, dos montañas y la frase Go2Climb" class = "img-icon">
             <div class = "container-options">
-                <img [routerLink]="['/profile-tourist', 'user1']"  src="https://yt3.ggpht.com/ytc/AKedOLQMSrgxItPwy1gW4nke8tyEXNImWjwt3upFTg7g=s900-c-k-c0x00ffffff-no-rj" class = "container-options-img" alt="imagen de perfil">
+                <mat-icon *ngIf="photo == ''">person</mat-icon>
+                <img *ngIf="photo != ''"
+                     [routerLink]="['/profile-tourist', 'user1']"  [src]="photo" class = "container-options-img" alt="imagen de perfil">
                 <app-menu></app-menu>
             </div>
         </div>
         <div class = "form-search">
-            <input type="text" class="input-search"
+            <input type="text" class="input-search" placeholder="¿Qué estás buscando hoy?"
                    (keypress)="search($event)" [(ngModel)]="text">
             <i class="fa-solid fa-magnifying-glass icon-search"></i>
         </div>
