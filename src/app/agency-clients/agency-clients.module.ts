@@ -27,9 +27,10 @@ import {ReactiveFormsModule} from "@angular/forms";
     StatusDialogComponent,
     AgencyInformationComponent
   ],
-  exports: [
-    AgencyClientsRoutingModule
-  ],
+    exports: [
+        AgencyClientsRoutingModule,
+        AgencyInformationComponent
+    ],
     imports: [
         CommonModule,
         MatCardModule,

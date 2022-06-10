@@ -7,6 +7,10 @@
     border-radius: 50%;
 }
 
+.card-border {
+    border-radius: 10px;
+}
+
 .circular--landscape img {
     width: auto;
     height: 100%;
@@ -65,4 +69,15 @@ input {
 
 .form-style {
     text-align: start;
+}
+
+@media only screen and (max-width: 875px) {
+    input {
+        width: 95%;
+        max-width: 100%;
+    }
+    textarea {
+        width: 95%;
+        max-width: 100%;
+    }
 }

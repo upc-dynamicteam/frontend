@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ServiceNormal} from "../../interfaces/ServiceNormal"
+import {ServiceNormal} from "../../interfaces/service-normal"
 
 @Component({
   selector: 'app-popular',

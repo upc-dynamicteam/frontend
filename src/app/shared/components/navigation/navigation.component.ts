@@ -1,22 +1,32 @@
-import {Component, Output, EventEmitter} from '@angular/core';
+import {Component, Output, EventEmitter, OnDestroy, ChangeDetectorRef, OnInit} from '@angular/core';
+import {MediaMatcher} from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css']
 })
-export class NavigationComponent {
+export class NavigationComponent implements OnInit, OnDestroy{
     @Output() openSearch = new EventEmitter<string>();
-
-    value: boolean = false;
     text: string = '';
+    mobileQuery: MediaQueryList;
+    photo: string = '';
 
-    change(): void{
-        this.value = !this.value
+    private readonly _mobileQueryListener: () => void;
+
+    constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+        this.mobileQuery = media.matchMedia('(max-width: 600px)');
+        this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+        this.mobileQuery.addEventListener('change', this._mobileQueryListener);
     }
 
-    login(): void {
-        let element = document.getElementById("")
+    ngOnInit() {
+        /*Cambiar a la foto del usuario registrado*/
+        this.photo = 'https://yt3.ggpht.com/ytc/AKedOLQMSrgxItPwy1gW4nke8tyEXNImWjwt3upFTg7g=s900-c-k-c0x00ffffff-no-rj';
+    }
+
+    ngOnDestroy(): void {
+        this.mobileQuery.removeEventListener('change', this._mobileQueryListener);
     }
 
     search(event: any) {
@@ -25,5 +35,4 @@ export class NavigationComponent {
             this.openSearch.emit(this.text);
         }
     }
-
 }
