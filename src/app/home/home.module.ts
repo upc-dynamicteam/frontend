@@ -6,7 +6,7 @@ import {OffersComponent} from "./components/offers/offers.component";
 import {SidebarComponent} from "./components/sidebar/sidebar.component";
 import {MainPageComponent} from "./components/main-page/main-page.component";
 import {HomePageComponent} from "./pages/home-page/home-page.component";
-import {HomeRoutingModule} from "./home.routing.module";
+import {HomeRoutingModule} from "./home-routing.module";
 import {MenuComponent} from "./components/menu/menu.component";
 
 // Material

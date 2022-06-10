@@ -4,7 +4,7 @@ import {ServicesListComponent} from "./components/services-list/services-list.co
 import {ReviewsComponent} from "./components/reviews/reviews.component";
 import {AgencyProfileComponent} from "./pages/agency-profile/agency-profile.component";
 import {MatCardModule} from "@angular/material/card";
-import {AgencyProfileRoutingModule} from "./agency-profile.routing.module";
+import {AgencyProfileRoutingModule} from "./agency-profile-routing.module";
 import {AgencyClientsModule} from "../agency-clients/agency-clients.module";
 
 

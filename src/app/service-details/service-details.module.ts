@@ -9,7 +9,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatCardModule} from "@angular/material/card";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {FlexLayoutModule} from "@angular/flex-layout";
-import {ServiciosRoutingModule} from "./serviciosRouting.module";
+import {ServiceRoutingModule} from "./service-routing.module";
 
 @NgModule({
     declarations: [
@@ -28,9 +28,9 @@ import {ServiciosRoutingModule} from "./serviciosRouting.module";
         MatCardModule,
         MatGridListModule,
         FlexLayoutModule,
-        ServiciosRoutingModule
+        ServiceRoutingModule
     ],
     providers: [DatePipe]
 })
 
-export class ServiciosDetallesModule{}
+export class ServiceDetailsModule {}
