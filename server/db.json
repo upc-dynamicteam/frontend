@@ -6,10 +6,10 @@
       "email": "sara.tour@gmail.com",
       "password": "123456!#A",
       "phoneNumber": "985389026",
-      "description": "Los mejores tours al precio mas barato que podrás encontrar",
+      "description": "Los mejores tours al precio mas barato que podrás encontrar.",
       "location": "Urb Barrio Nicolas de Pierola, San Martín de Porres, Lima, Perú",
       "ruc": "84579615",
-      "photo": "https://blogger.googleusercontent.com/img/a/AVvXsEg0EY-vzVNWrIWSCVN6TexubN3nBLWOTmWkmroEtmIVLQhVMzMJfpjq3uQvyDYX_Lw8kM1TGp1gPblzSViMTQzM9f_eeK2CSu2rzDSta8J3DgJum4m3HwX2U9zKhl7eDE9a3Cw4pBbIH8WDiTLrzwNBiidgZCot8t9Xg6enY7YWlvzbjvScdMXTYoD-7w=s16000",
+      "photo": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/2659/posts/32230/image/logo-template-for-a-travel-agency-with-a-baggage-icon-2504b.jpg",
       "score": "5"
     },
     {
@@ -134,16 +134,62 @@
       "scheduledDate": "07/05/2022",
       "status": "pendiente",
       "customerId": "c1",
-      "serviceId": "s1"
+      "serviceId": "s1",
+      "customer": {
+        "id": "c1",
+        "name": "Alejandro",
+        "lastName": "Jacobo",
+        "email": "alejandro.jacobo@gmail.com",
+        "password": "123456!#A",
+        "phoneNumber": "963025991",
+        "photo": "https://i.pinimg.com/originals/1c/2e/32/1c2e320bc4301663b9f81e062b72ea69.jpg"
+      },
+      "customerName": "Alejandro Jacobo",
+      "service": {
+        "id": "s1",
+        "name": "Full Day Ica para toda la familia",
+        "score": "5",
+        "price": "250",
+        "newPrice": "100",
+        "location": "Barrio 5 esquinas, Ica, Perú",
+        "creationDate": "25/01/2022",
+        "photos": "https://dam.ngenespanol.com/wp-content/uploads/2019/05/tayikistan-montanas.png",
+        "description": "Disfruta de un full day en Ica, nos encontramos en oferta, precios accesibles [continuar...]",
+        "isOffer": "1",
+        "agencyId": "a1"
+      }
     },
     {
       "id": "h2",
       "amount": "3",
       "price": "340",
       "scheduledDate": "10/05/2022",
-      "status": "en progreso",
+      "status": "pendiente",
       "customerId": "c1",
-      "serviceId": "s2"
+      "serviceId": "s2",
+      "customer": {
+        "id": "c1",
+        "name": "Alejandro",
+        "lastName": "Jacobo",
+        "email": "alejandro.jacobo@gmail.com",
+        "password": "123456!#A",
+        "phoneNumber": "963025991",
+        "photo": "https://i.pinimg.com/originals/1c/2e/32/1c2e320bc4301663b9f81e062b72ea69.jpg"
+      },
+      "customerName": "Alejandro Jacobo",
+      "service": {
+        "id": "s2",
+        "name": "Paseos en lancha en la laguna de Lyto",
+        "score": "4",
+        "price": "300",
+        "newPrice": "100",
+        "location": "Barrio  esquinas, Lyto, Perú",
+        "creationDate": "7/04/2022",
+        "photos": "https://www.lapescatamaulipas.com/assets/paseo_en_lancha_1-052d1cf9ddd7313d234ed7a3851bbd369e426c7a26ffffa430dd3055bab709d4.jpg",
+        "description": "Disfruta de un hermosos paseo en lancha en la laguna Lyto, conoce las maravillas de... [continuar...]",
+        "isOffer": "0",
+        "agencyId": "a1"
+      }
     },
     {
       "id": "h3",
@@ -210,39 +256,39 @@
       "agencyId": "a1"
     }
   ],
-    "servicesHired": [
-        {
-            "id": "r1",
-            "idUser": "user1",
-            "numberService": "12345",
-            "dateService": "18 de julio del 2021",
-            "agencie": "Travelnew",
-            "img": "https://www.entornoturistico.com/wp-content/uploads/2016/02/Practicando-escalada.jpg",
-            "importTotal": "500",
-            "infoService": "Disfruta de una aventura en la montoña El Huascaran",
-            "state": "En proceso"
-        },
-        {
-            "id": "r2",
-            "idUser": "user1",
-            "numberService": "34234322",
-            "dateService": "11 de julio del 2021",
-            "agencie": "Super Travel",
-            "img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/9c/a9/94/caption.jpg?w=500&h=400&s=1",
-            "importTotal": "1500",
-            "infoService": "Disfruta los mejores paseos",
-            "state": "En proceso"
-        },
-        {
-            "id": "r2",
-            "idUser": "user2",
-            "numberService": "5235242",
-            "dateService": "24 de diciembre del 2021",
-            "agencie": "Super Travel",
-            "img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/9c/a9/94/caption.jpg?w=500&h=400&s=1",
-            "importTotal": "3000",
-            "infoService": "Disfruta los mejores paseos",
-            "state": "En proceso"
-        }
-    ]
+  "servicesHired": [
+    {
+      "id": "r1",
+      "idUser": "user1",
+      "numberService": "12345",
+      "dateService": "18 de julio del 2021",
+      "agencie": "Travelnew",
+      "img": "https://www.entornoturistico.com/wp-content/uploads/2016/02/Practicando-escalada.jpg",
+      "importTotal": "500",
+      "infoService": "Disfruta de una aventura en la montoña El Huascaran",
+      "state": "En proceso"
+    },
+    {
+      "id": "r2",
+      "idUser": "user1",
+      "numberService": "34234322",
+      "dateService": "11 de julio del 2021",
+      "agencie": "Super Travel",
+      "img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/9c/a9/94/caption.jpg?w=500&h=400&s=1",
+      "importTotal": "1500",
+      "infoService": "Disfruta los mejores paseos",
+      "state": "En proceso"
+    },
+    {
+      "id": "r2",
+      "idUser": "user2",
+      "numberService": "5235242",
+      "dateService": "24 de diciembre del 2021",
+      "agencie": "Super Travel",
+      "img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/9c/a9/94/caption.jpg?w=500&h=400&s=1",
+      "importTotal": "3000",
+      "infoService": "Disfruta los mejores paseos",
+      "state": "En proceso"
+    }
+  ]
 }

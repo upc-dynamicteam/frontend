@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-filters',
@@ -8,28 +7,42 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 })
 export class FiltersComponent implements OnInit {
 
-    @ViewChild('priceForm', {static: false})
-    priceForm!: FormGroup;
+    serviceStars: number = -1;
+    agencyStars: number = -1;
+    lowestPrice!: number;
+    highestPrice!: number;
 
-    constructor(private readonly fb: FormBuilder) { }
+    initializer: boolean = false;
+
+    @Output() openFilter = new EventEmitter<any>();
+
+    constructor() { }
 
     ngOnInit(): void {
-        this.formInitialization();
-    }
-
-    formInitialization() {
-      this.priceForm = this.fb.group({
-          lowestPrice: [''],
-          highestPrice: ['']
-      })
-    }
-
-    onSubmit(){
-        console.log("x");
     }
 
     calc(n: number, t: number): Array<number> {
         if (t === 0) return Array(n);
         else return Array(5 - n);
     }
+
+    changeServiceStars(value: number){
+        this.serviceStars = value;
+    }
+
+    changeAgencyStars(value: number){
+        this.agencyStars = value;
+    }
+
+    onSubmit(){
+        let filterData = {
+            lowestPrice: this.lowestPrice,
+            highestPrice: this.highestPrice,
+            serviceStars: this.serviceStars,
+            agencyStars: this.agencyStars
+        }
+        console.log(filterData);
+        this.openFilter.emit(filterData);
+    }
+
 }

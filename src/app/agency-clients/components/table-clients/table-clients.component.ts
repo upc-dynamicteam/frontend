@@ -44,12 +44,20 @@ export class TableClientsComponent implements OnInit {
     editStatus(element: any){
         this.editData = element;
         this.isEditMode = true;
-        const dialogRef = this.dialog.open(StatusDialogComponent);
+        const dialogRef = this.dialog.open(StatusDialogComponent, {
+            data: {e: element}
+        });
 
         dialogRef.afterClosed().subscribe(result => {
-            console.log(`Dialog result: ${result}`);
+            if (result != null)
+            this.updateHiredService(result.e);
         });
     }
 
+    updateHiredService(hiredService: any) {
+        this.agencyClientsService.update(hiredService.id, hiredService).subscribe((response: any) => {
+            console.log(response);
+        })
+    }
 
 }

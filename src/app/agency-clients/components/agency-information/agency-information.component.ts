@@ -1,8 +1,6 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AgenciesService } from "../../services/agencies.service";
 import { Agency } from "../../interfaces/agency";
-import {FormBuilder, FormGroup} from "@angular/forms";
-import * as _ from 'lodash';
 
 @Component({
   selector: 'app-agency-information',
@@ -11,14 +9,21 @@ import * as _ from 'lodash';
 })
 export class AgencyInformationComponent implements OnInit {
 
-  @ViewChild('agencyInformationForm', {static: false})
-  agencyInformationForm!: FormGroup;
-
-  constructor(private agenciesService: AgenciesService, private readonly fb: FormBuilder) { }
+  constructor(private agenciesService: AgenciesService) { }
 
   agencyData!: Agency;
+  defaultPhoto: string = "/assets/img/perfil-empty.png";
+
+  editedImage: any;
+  imageUrl!: string;
+
   isEditMode = false;
   editData!: Agency;
+
+  description!: string;
+  location!: string;
+  ruc!: string;
+  phoneNumber!: string;
 
   ngOnInit(): void {
       this.getAgencyData("a1");
@@ -30,14 +35,24 @@ export class AgencyInformationComponent implements OnInit {
       })
   }
 
-  formInitialization() {
-      this.agencyInformationForm = this.fb.group({
-          description: [''],
-          location: [''],
-          ruc: [''],
-          phoneNumber: ['']
-      })
-      this.agencyInformationForm.patchValue(this.agencyData);
+  editInitialization() {
+      this.description = this.agencyData.description;
+      this.location = this.agencyData.location;
+      this.ruc = this.agencyData.ruc;
+      this.phoneNumber = this.agencyData.phoneNumber;
+  }
+
+  getImage(event: any): any {
+      this.editedImage = event.target.files[0];
+      this.convertImageToBase64();
+  }
+
+  convertImageToBase64(): void {
+      let reader = new FileReader();
+      reader.readAsDataURL(this.editedImage as Blob);
+      reader.onloadend = () => {
+          this.imageUrl = reader.result as string;
+      }
   }
 
   OnlyNumbersAllowed(event: any):boolean {
@@ -48,7 +63,8 @@ export class AgencyInformationComponent implements OnInit {
 
   editMode() {
       this.isEditMode = true;
-      this.formInitialization();
+      this.imageUrl = this.agencyData.photo;
+      this.editInitialization();
   }
 
   cancelEdit() {
@@ -64,10 +80,11 @@ export class AgencyInformationComponent implements OnInit {
 
   onSubmit() {
       this.editData = this.agencyData;
-      this.editData.description = this.agencyInformationForm.value.description;
-      this.editData.location = this.agencyInformationForm.value.location;
-      this.editData.ruc = this.agencyInformationForm.value.ruc;
-      this.editData.phoneNumber = this.agencyInformationForm.value.phoneNumber;
+      this.editData.photo = this.imageUrl;
+      this.editData.description = this.description;
+      this.editData.location = this.location;
+      this.editData.ruc = this.ruc;
+      this.editData.phoneNumber = this.phoneNumber;
       this.updateAgencyInformation();
   }
 

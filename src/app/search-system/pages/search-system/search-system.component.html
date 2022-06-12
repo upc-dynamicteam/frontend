@@ -1,6 +1,6 @@
 <div class="container">
     <mat-card class="side">
-        <app-filters></app-filters>
+        <app-filters (openFilter)="getFilter($event)"></app-filters>
     </mat-card>
     <mat-card class="content">
         <app-results [text]="search"></app-results>
