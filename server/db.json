@@ -134,30 +134,7 @@
       "scheduledDate": "07/05/2022",
       "status": "pendiente",
       "customerId": "c1",
-      "serviceId": "s1",
-      "customer": {
-        "id": "c1",
-        "name": "Alejandro",
-        "lastName": "Jacobo",
-        "email": "alejandro.jacobo@gmail.com",
-        "password": "123456!#A",
-        "phoneNumber": "963025991",
-        "photo": "https://i.pinimg.com/originals/1c/2e/32/1c2e320bc4301663b9f81e062b72ea69.jpg"
-      },
-      "customerName": "Alejandro Jacobo",
-      "service": {
-        "id": "s1",
-        "name": "Full Day Ica para toda la familia",
-        "score": "5",
-        "price": "250",
-        "newPrice": "100",
-        "location": "Barrio 5 esquinas, Ica, Perú",
-        "creationDate": "25/01/2022",
-        "photos": "https://dam.ngenespanol.com/wp-content/uploads/2019/05/tayikistan-montanas.png",
-        "description": "Disfruta de un full day en Ica, nos encontramos en oferta, precios accesibles [continuar...]",
-        "isOffer": "1",
-        "agencyId": "a1"
-      }
+      "serviceId": "s1"
     },
     {
       "id": "h2",
@@ -166,30 +143,7 @@
       "scheduledDate": "10/05/2022",
       "status": "pendiente",
       "customerId": "c1",
-      "serviceId": "s2",
-      "customer": {
-        "id": "c1",
-        "name": "Alejandro",
-        "lastName": "Jacobo",
-        "email": "alejandro.jacobo@gmail.com",
-        "password": "123456!#A",
-        "phoneNumber": "963025991",
-        "photo": "https://i.pinimg.com/originals/1c/2e/32/1c2e320bc4301663b9f81e062b72ea69.jpg"
-      },
-      "customerName": "Alejandro Jacobo",
-      "service": {
-        "id": "s2",
-        "name": "Paseos en lancha en la laguna de Lyto",
-        "score": "4",
-        "price": "300",
-        "newPrice": "100",
-        "location": "Barrio  esquinas, Lyto, Perú",
-        "creationDate": "7/04/2022",
-        "photos": "https://www.lapescatamaulipas.com/assets/paseo_en_lancha_1-052d1cf9ddd7313d234ed7a3851bbd369e426c7a26ffffa430dd3055bab709d4.jpg",
-        "description": "Disfruta de un hermosos paseo en lancha en la laguna Lyto, conoce las maravillas de... [continuar...]",
-        "isOffer": "0",
-        "agencyId": "a1"
-      }
+      "serviceId": "s2"
     },
     {
       "id": "h3",

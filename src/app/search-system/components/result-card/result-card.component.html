@@ -5,7 +5,9 @@
                  [src]="data.photos">
         </div>
         <mat-card-content class="content">
+            <a (click)="goToService()">
             <mat-card-title>{{data.name}}</mat-card-title>
+            </a>
 
             <!--Service rate-->
             <mat-icon class="icon-service"
