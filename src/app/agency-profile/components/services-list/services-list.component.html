@@ -4,15 +4,15 @@
         <button class="btn">Ofertas</button>
         <button mat-flat-button class="btn2" [routerLink]="['/add-service']">+</button>
     </div>
-    <div class="container-services">
-        <article *ngFor=" let element of listServices">
+    <div class="container-services" *ngIf="serviceData">
+        <article>
             <div class="element-service">
-                <img src="{{element.imgUrl}}" alt="" class = "img-card">
-                <p class = "element-description">{{element.description}}</p>
+                <img src="{{serviceData.imgUrl}}" alt="" class = "img-card">
+                <p class = "element-description">{{serviceData.description}}</p>
                 <img src="../../../../assets/img/starts.PNG" alt="">
                 <div class="container-prices">
-                    <p>${{element.priceNormal.toFixed(2)}}</p>
-                    <p>${{element.priceOffer.toFixed(2)}}</p>
+                    <p>${{serviceData.priceNormal}}</p>
+                    <p>${{serviceData.priceOffer}}</p>
                 </div>
             </div>
         </article>
