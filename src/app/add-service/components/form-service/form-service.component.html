@@ -1,0 +1,35 @@
+<div class="container-general-services">
+    <h1 class = "title">Añadir servicio</h1>
+    <h2 class="title">Datos generales</h2>
+    <hr>
+    <div class="container-content">
+        <form action="">
+            <p class = "black">Nombre del servicio</p>
+            <input class = "input" placeholder="Nombre del servicio">
+            <p class = "black">Descripcion</p>
+            <input class = "input" placeholder="Descripcion">
+            <p class = "black">Lugar</p>
+            <input class = "input" placeholder="Lugar">
+            <p class = "black">Actividades a realizar</p>
+            <input class = "input" placeholder="Actividades a realizar">
+            <button class = "btn mt-20">Agregar actividad</button>
+            <div class="container-inputs">
+                <p class = "black">Precio</p>
+                <input class = "input" placeholder="Precio">
+                <p class = "black">Horario</p>
+                <input class = "input" placeholder="De:">
+                <input class = "input" placeholder="Hasta:">
+            </div>
+            <button class = "btn mt-20">Agregar oferta</button>
+            <p class = "black">Imagenes referenciales</p>
+            <p class = "black">Programar creacion</p>
+            <div class="container-inputs">
+            <p class = "black">Publicar servicio en...</p>
+            <input class = "input" placeholder="De:">
+            <input class = "input" placeholder="hasta">
+            </div>
+
+        </form>
+        <button class = "btn mt-20" [routerLink]="['/agency-profile']">Continuar</button>
+    </div>
+</div>

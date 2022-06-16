@@ -2,7 +2,7 @@
     <h1 class = "title">Servicios</h1>
     <div class="buttons">
         <button class="btn">Ofertas</button>
-        <button class="btn2">+</button>
+        <button mat-flat-button class="btn2" [routerLink]="['/add-service']">+</button>
     </div>
     <div class="container-services">
         <article *ngFor=" let element of listServices">
@@ -23,7 +23,7 @@
                 <img src="{{element.imgUrl}}" alt="" class = "img-card">
                 <p class = "element-description">{{element.description}}</p>
                 <img src="../../../../assets/img/starts.PNG" alt="">
-                <div class="container-prices">
+                <div class="container-prices-normal">
                     <p>${{element.price.toFixed(2)}}</p>
                 </div>
             </div>

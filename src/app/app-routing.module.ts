@@ -30,6 +30,10 @@ const routes: Routes = [
         path: "agency-profile",
         loadChildren: () => import("./agency-profile/agency-profile.module").then(m => m.AgencyProfileModule)
     },
+    {
+        path: "add-service",
+        loadChildren: () => import("./add-service/add-service.module").then(m => m.AddServiceModule)
+    },
     { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 

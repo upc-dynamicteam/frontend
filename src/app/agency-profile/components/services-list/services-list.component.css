@@ -38,6 +38,11 @@
     font-weight: 700;
     margin: 0;
 }
+.container-prices-normal {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+}
 .title{
     font-size: 20px;
     font-weight: 700;
@@ -48,15 +53,24 @@
 .buttons{
     display: flex;
     margin-bottom: 10px;
+    justify-content: space-between;
 }
 .btn {
     display: flex;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #9CD4E7;
+    position: relative;
+    align-items: center;
+    width: 5rem;
+    height: 2rem;
 }
 .btn2 {
     display: flex;
-    align-content: end;
-    border-radius: 10px;
+    position: center;
+    align-items: center;
+    border-radius: 20px;
     background-color: #9CD4E7;
+    font-size: 12px;
+    width: 2rem;
+    height: 2rem;
 }
