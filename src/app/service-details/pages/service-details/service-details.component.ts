@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { DatePipe } from "@angular/common";
-import { ActivatedRoute } from "@angular/router";
+import {Component, OnInit} from '@angular/core';
+import {DatePipe} from "@angular/common";
 
 @Component({
   selector: 'app-serviceDetails',
@@ -12,15 +11,9 @@ export class ServiceDetailsComponent implements OnInit {
   images: Gallery[] = [];
   information: Info[] = [];
 
-  serviceId: any;
-
-  constructor(private datePipe: DatePipe, private _activatedRoute: ActivatedRoute) {}
+  constructor(private datePipe: DatePipe) {}
 
   ngOnInit() :void {
-    this._activatedRoute.paramMap.subscribe(params => {
-        this.serviceId = params.get('id');
-    })
-    console.log(this.serviceId);
     this.images = [
       {cols: 2, rows: 2},
       {cols: 1, rows: 1},

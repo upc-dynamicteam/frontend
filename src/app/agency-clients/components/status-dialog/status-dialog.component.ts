@@ -1,5 +1,4 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import { Component, OnInit } from '@angular/core';
 
 interface Status {
     value: string;
@@ -13,22 +12,13 @@ interface Status {
 })
 export class StatusDialogComponent implements OnInit {
 
-  constructor(public dialogRef: MatDialogRef<StatusDialogComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: any) {
-  }
-
+  constructor() { }
   ngOnInit(): void {
   }
-
-  selectedStatus!: string;
-
+  selectedValue!: string;
   status: Status[] = [
       {value: 'pendiente', viewValue: 'Pendiente'},
       {value: 'en progreso', viewValue: 'En progreso'},
       {value: 'finalizado', viewValue: 'Finalizado'},
   ];
-
-    onNoClick(): void {
-        this.dialogRef.close();
-    }
 }

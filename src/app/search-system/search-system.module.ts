@@ -8,8 +8,7 @@ import { MatCardModule } from "@angular/material/card";
 import { ResultCardComponent } from './components/result-card/result-card.component';
 import { MatIconModule } from "@angular/material/icon";
 import { FiltersComponent } from './components/filters/filters.component';
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { MatButtonModule } from "@angular/material/button";
+import { ReactiveFormsModule } from "@angular/forms";
 
 
 @NgModule({
@@ -24,9 +23,7 @@ import { MatButtonModule } from "@angular/material/button";
         SearchSystemRoutingModule,
         MatCardModule,
         MatIconModule,
-        ReactiveFormsModule,
-        MatButtonModule,
-        FormsModule
+        ReactiveFormsModule
     ]
 })
 export class SearchSystemModule { }

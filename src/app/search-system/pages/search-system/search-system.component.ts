@@ -1,6 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute, Params } from "@angular/router";
-import { ResultsComponent } from "../../components/results/results.component";
+import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Params} from "@angular/router";
 
 @Component({
   selector: 'app-search-system',
@@ -9,15 +8,11 @@ import { ResultsComponent } from "../../components/results/results.component";
 })
 export class SearchSystemComponent implements OnInit {
     search: any;
-    @ViewChild(ResultsComponent) result!: ResultsComponent;
-
     constructor(private _activatedRoute: ActivatedRoute) { }
     ngOnInit(): void {
         this._activatedRoute.paramMap.subscribe(params => {
             this.search = params.get('text');
         })
     }
-    getFilter(e: any) {
-        this.result.getMatchesWithFilters(e);
-    }
+
 }

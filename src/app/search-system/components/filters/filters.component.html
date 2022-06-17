@@ -1,40 +1,40 @@
 <h2>Filtros</h2>
 <!--Precios-->
-<div>
+<form (submit)="onSubmit()" [formGroup]="priceForm">
     <p>Precio</p>
     <div class="cost-text">
-        <input type="number" placeholder="Precio min" [(ngModel)]="lowestPrice" />
-        <input type="number" placeholder="Precio max" [(ngModel)]="highestPrice" />
+        <input type="number" formControlName="lowestPrice" placeholder="Precio min"/>
+        <input type="number" formControlName="highestPrice" placeholder="Precio max"/>
     </div>
     <div class="score-filters">
         <div class="agency-score">
             <p>Puntuación de la agencia</p>
-            <a class="flex" (click)="changeAgencyStars(5)">
+            <a class="flex">
                 <div><mat-icon class="icon" *ngFor="let i of calc(5, 0);">star</mat-icon></div>
                 <span>o más</span>
             </a>
-            <a class="flex" (click)="changeAgencyStars(4)">
+            <a class="flex">
                 <div>
                     <mat-icon class="icon" *ngFor="let i of calc(4, 0);">star</mat-icon>
                     <mat-icon class="icon" *ngFor="let i of calc(4, 1);">star_border</mat-icon>
                 </div>
                 <span>o más</span>
             </a>
-            <a class="flex" (click)="changeAgencyStars(3)">
+            <a class="flex">
                 <div>
                     <mat-icon class="icon" *ngFor="let i of calc(3, 0);">star</mat-icon>
                     <mat-icon class="icon" *ngFor="let i of calc(3, 1);">star_border</mat-icon>
                 </div>
                 <span>o más</span>
             </a>
-            <a class="flex" (click)="changeAgencyStars(2)">
+            <a class="flex">
                 <div>
                     <mat-icon class="icon" *ngFor="let i of calc(2, 0);">star</mat-icon>
                     <mat-icon class="icon" *ngFor="let i of calc(2, 1);">star_border</mat-icon>
                 </div>
                 <span>o más</span>
             </a>
-            <a class="flex" (click)="changeAgencyStars(1)">
+            <a class="flex">
                 <div>
                     <mat-icon class="icon" *ngFor="let i of calc(1, 0);">star</mat-icon>
                     <mat-icon class="icon" *ngFor="let i of calc(1, 1);">star_border</mat-icon>
@@ -44,32 +44,32 @@
         </div>
         <div class="service-score">
             <p>Puntuación del servicio</p>
-            <a class="flex" (click)="changeServiceStars(5)">
+            <a class="flex">
                 <div><mat-icon class="icon" *ngFor="let i of calc(5, 0);">star</mat-icon></div>
                 <span>o más</span>
             </a>
-            <a class="flex" (click)="changeServiceStars(4)">
+            <a class="flex">
                 <div>
                     <mat-icon class="icon" *ngFor="let i of calc(4, 0);">star</mat-icon>
                     <mat-icon class="icon" *ngFor="let i of calc(4, 1);">star_border</mat-icon>
                 </div>
                 <span>o más</span>
             </a>
-            <a class="flex" (click)="changeServiceStars(3)">
+            <a class="flex">
                 <div>
                     <mat-icon class="icon" *ngFor="let i of calc(3, 0);">star</mat-icon>
                     <mat-icon class="icon" *ngFor="let i of calc(3, 1);">star_border</mat-icon>
                 </div>
                 <span>o más</span>
             </a>
-            <a class="flex" (click)="changeServiceStars(2)">
+            <a class="flex">
                 <div>
                     <mat-icon class="icon" *ngFor="let i of calc(2, 0);">star</mat-icon>
                     <mat-icon class="icon" *ngFor="let i of calc(2, 1);">star_border</mat-icon>
                 </div>
                 <span>o más</span>
             </a>
-            <a class="flex" (click)="changeServiceStars(1)">
+            <a class="flex">
                 <div>
                     <mat-icon class="icon" *ngFor="let i of calc(1, 0);">star</mat-icon>
                     <mat-icon class="icon" *ngFor="let i of calc(1, 1);">star_border</mat-icon>
@@ -78,6 +78,5 @@
             </a>
         </div>
     </div>
-    <button mat-flat-button class="button-personalization" (click)="onSubmit()">Aplicar filtros</button>
-</div>
+</form>
 

@@ -67,23 +67,6 @@ input {
     max-width: 125px;
 }
 
-.file {
-    margin: 8px 0 15px 0;
-}
-
-.file input {
-    display: none;
-}
-
-.file label {
-    font-size: 12px;
-    font-weight: 500;
-    padding: 8px 35px;
-    background-color: #9CD4E7;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
 .form-style {
     text-align: start;
 }

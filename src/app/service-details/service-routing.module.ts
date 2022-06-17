@@ -9,8 +9,7 @@ const routes: Routes = [
         path: '',
         children: [
             { path: '', component: ServiceDetailsComponent }
-        ],
-        runGuardsAndResolvers: 'paramsOrQueryParamsChange'
+        ]
     }
 ]
 

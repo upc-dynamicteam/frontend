@@ -1,15 +1,11 @@
 <mat-card class="card-border" style="text-align: center;">
-    <div class="circular--landscape" *ngIf="!isEditMode">
-        <img *ngIf="agencyData != null" [src] = "agencyData.photo"/>
-        <img *ngIf="agencyData == null || agencyData.photo == ''" [src] = "defaultPhoto"/>
+    <div class="circular--landscape">
+        <img [src] = "agencyData.photo" />
     </div>
-    <div class="circular--landscape" *ngIf="isEditMode">
-        <img [src] = "this.imageUrl">
-    </div>
-    <div style="text-align: start;" *ngIf="agencyData != null">
+    <div style="text-align: start;">
+        <h2 class="no-margin"><b>{{ agencyData.name }}</b></h2>
+        <p>{{ agencyData.email }}</p>
         <div *ngIf="!isEditMode">
-            <h2 class="no-margin"><b>{{ agencyData.name }}</b></h2>
-            <p>{{ agencyData.email }}</p>
             <p><i> {{ agencyData.description }} </i></p>
             <p class="no-margin"><b>Ubicación:</b></p>
             <p><i> {{ agencyData.location }} </i></p>
@@ -21,31 +17,24 @@
     </div>
     <button *ngIf="!isEditMode" mat-flat-button class="button-personalization" (click)="editMode()">Editar información</button>
 
-    <div class="file" *ngIf="isEditMode">
-        <label for="archive">Cambiar foto</label>
-        <input accept="image/*"
-               type="file" (change)="getImage($event)" id="archive">
-    </div>
-
     <!--Editar información-->
-    <div class="form-style" *ngIf="isEditMode">
+    <form (submit)="onSubmit()" class="form-style" *ngIf="isEditMode" [formGroup]="agencyInformationForm">
         <p style="margin-bottom: 5px;"><b>Descripción:</b></p>
         <textarea class="textarea-style" rows="5" maxlength="150"
                   placeholder="Ingresa una descripción..."
-                  name="description" [(ngModel)]="description">
+                  name="description" formControlName="description">
         </textarea>
         <p style="margin-bottom: 5px;"><b>Ubicación:</b></p>
         <textarea class="textarea-style" rows="4" maxlength="150"
-                  placeholder="Ingresa tu dirección..." name="address" [(ngModel)]="location">
+                  placeholder="Ingresa tu dirección..." name="address" formControlName="location">
         </textarea>
         <p style="margin-bottom: 5px;"><b>RUC:</b></p>
-        <input type="text" (keypress)="OnlyNumbersAllowed($event)" maxlength="8" [(ngModel)]="ruc">
+        <input type="text" (keypress)="OnlyNumbersAllowed($event)" maxlength="8" formControlName="ruc">
         <p style="margin-bottom: 5px;"><b>Teléfono:</b></p>
-        <input type="text" (keypress)="OnlyNumbersAllowed($event)" maxlength="9" [(ngModel)]="phoneNumber">
+        <input type="text" (keypress)="OnlyNumbersAllowed($event)" maxlength="9" formControlName="phoneNumber">
 
         <button mat-flat-button class="button-personalization-back" (click)="cancelEdit()">Volver</button>
-        <button mat-flat-button class="button-personalization" (click)="onSubmit()">Actualizar</button>
+        <button mat-flat-button class="button-personalization" type="submit">Actualizar</button>
 
-    </div>
+    </form>
 </mat-card>
-

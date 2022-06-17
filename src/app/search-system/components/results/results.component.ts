@@ -11,10 +11,8 @@ import {NavigationEnd, Router} from "@angular/router";
 })
 export class ResultsComponent implements OnInit, OnDestroy {
     @Input() text: string = '';
-
+    beforeText!: string;
     services!: Service[];
-    servicesWithFilters: any = [];
-
     subscriber!: Subscription;
 
     constructor(private servicesService: ServicesService, private router: Router) { }
@@ -34,46 +32,6 @@ export class ResultsComponent implements OnInit, OnDestroy {
         this.servicesService.getAllByText(this.text).subscribe((response: any) => {
             this.services = response;
         })
-    }
-
-    getMatchesWithFilters(filter: any) {
-        for (let i = 0; i < this.services.length; i++)
-        {
-            let cont = 0;
-            let ok = 0;
-            let service = this.services[i];
-
-            //hasLowestPrice
-            if (filter.lowestPrice != null) {
-                cont++;
-                if (service.isOffer == "1") {
-                    if (parseFloat(service.newPrice) >= filter.lowestPrice) ok++;
-                }
-                else {
-                    if (parseFloat(service.price) >= filter.lowestPrice) ok++;
-                }
-            }
-            if (filter.highestPrice != null) {
-                cont++;
-                if (service.isOffer == "1") {
-                    if (parseFloat(service.newPrice) <= filter.highestPrice) ok++;
-                }
-                else {
-                    if (parseFloat(service.price) <= filter.highestPrice) ok++;
-                }
-            }
-            if (filter.serviceStars != -1) {
-                cont++;
-                if (parseInt(service.score) >= filter.serviceStars) ok++;
-            }
-            //Implement agencyStars
-
-            if (ok == cont) {
-                this.servicesWithFilters.push(service);
-            }
-        }
-        this.services = this.servicesWithFilters;
-        this.servicesWithFilters = [];
     }
 
     ngOnDestroy() {

@@ -5,9 +5,7 @@
                  [src]="data.photos">
         </div>
         <mat-card-content class="content">
-            <a (click)="goToService()">
             <mat-card-title>{{data.name}}</mat-card-title>
-            </a>
 
             <!--Service rate-->
             <mat-icon class="icon-service"
@@ -15,8 +13,8 @@
             <mat-icon class="icon-service"
                       *ngFor="let i of calc(data.score, 1);">star_border</mat-icon>
 
-            <div class="by" *ngIf="agency != null">
-                <p>por <a><b>{{ agency.name }}</b></a></p>
+            <div class="by">
+                <p>por <a><b>{{agency.name}}</b></a></p>
                 <!--Agency rate-->
                 <div>
                     <mat-icon class="icon-agency"
@@ -26,15 +24,13 @@
                 </div>
             </div>
 
-            <p>{{data.description}}</p>
-
             <!--Text if this an offer-->
-            <div *ngIf="data.isOffer == '1'">
+            <div *ngIf="data.isOffer">
                 <span class="price"><del>${{data.price}}.00</del></span>
                 <span class="price">${{data.newPrice}}.00</span>
             </div>
             <!--Text if this not an offer-->
-            <div *ngIf="data.isOffer == '0'">
+            <div *ngIf="!data.isOffer">
                 <span class="price">${{data.price}}.00</span>
             </div>
         </mat-card-content>

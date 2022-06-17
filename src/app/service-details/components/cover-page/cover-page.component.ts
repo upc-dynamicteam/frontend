@@ -1,5 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {DatePipe} from "@angular/common";
+import {Component, Input, OnInit} from '@angular/core';
+import {Service} from "../../interfaces/service";
+import {AgenciesService} from "../../../agency-clients/services/agencies.service";
+import {Agency} from "../../../agency-clients/interfaces/agency";
 
 @Component({
   selector: 'app-coverPage',
@@ -7,22 +9,17 @@ import {DatePipe} from "@angular/common";
   styleUrls: ['./cover-page.component.css']
 })
 export class CoverPageComponent implements OnInit {
-  title = 'cover-page';
-  images: Gallery[] = [];
+    @Input() data!: Service;
+    agency!: Agency;
 
-  ngOnInit() :void {
-    this.images = [
-      {cols: 2, rows: 2},
-      {cols: 1, rows: 1},
-      {cols: 1, rows: 1},
-      {cols: 1, rows: 1},
-      {cols: 1, rows: 1},
-    ];
-  }
+    constructor(private agenciesService: AgenciesService) { }
+    ngOnInit(): void {
+        this.getAgency();
+    }
+
+    getAgency() {
+        this.agenciesService.getById(this.data.agencyId).subscribe((response: any) => {
+            this.agency = response;
+        })
+    }
 }
-
-export interface Gallery {
-  cols: number;
-  rows: number;
-}
-

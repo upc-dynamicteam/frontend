@@ -9,9 +9,8 @@ const routes: Routes = [
         loadChildren: () => import('./home/home.module').then(m => m.HomeModule )
     },
     {
-        path: 'service/:id',
-        loadChildren: () => import('./service-details/service-details.module').then(m => m.ServiceDetailsModule ),
-        runGuardsAndResolvers: 'paramsOrQueryParamsChange'
+        path: 'services/:id',
+        loadChildren: () => import('./service-details/service-details.module').then(m => m.ServiceDetailsModule )
     },
     {
         path: 'clients',

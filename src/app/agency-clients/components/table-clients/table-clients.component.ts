@@ -42,35 +42,14 @@ export class TableClientsComponent implements OnInit {
     }
 
     editStatus(element: any){
+        this.editData = element;
         this.isEditMode = true;
-        const dialogRef = this.dialog.open(StatusDialogComponent, {
-            data: {e: element}
-        });
+        const dialogRef = this.dialog.open(StatusDialogComponent);
 
         dialogRef.afterClosed().subscribe(result => {
-            if (result != null) {
-                this.toHiredService(result.e);
-                this.updateHiredService(this.editData);
-            }
+            console.log(`Dialog result: ${result}`);
         });
     }
 
-    toHiredService(element: any) {
-        this.editData = {
-            "id": element.id,
-            "amount": element.amount,
-            "price": element.price,
-            "scheduledDate": element.scheduledDate,
-            "status": element.status,
-            "customerId": element.customerId,
-            "serviceId": element.serviceId
-        }
-    }
-
-    updateHiredService(hiredService: any) {
-        this.agencyClientsService.update(hiredService.id, hiredService).subscribe((response: any) => {
-            console.log(response);
-        })
-    }
 
 }

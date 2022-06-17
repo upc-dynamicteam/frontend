@@ -8,7 +8,7 @@ import { HiredService } from "../interfaces/hired-service";
 })
 export class AgencyClientsService {
     //HiredService EndPoint
-    basePath = 'http://localhost:3000/api/v1/hiredServices'
+    basePath = 'https://fake-api-go2climb.herokuapp.com/hiredServices'
     constructor(private http: HttpClient) { }
 
     //HTTP Default options
@@ -56,7 +56,7 @@ export class AgencyClientsService {
 
     //Get HiredService extend information by agencyId
     getExtendInformation(agencyId: string, category: string): Observable<any> {
-        return this.http.get<any>(`http://localhost:3000/api/v1/agencies/${agencyId}/hiredServices?_expand=${category}`)
+        return this.http.get<any>(`https://fake-api-go2climb.herokuapp.com/agencies/${agencyId}/hiredServices?_expand=${category}`)
             .pipe(retry(2),
                 catchError(this.handleError));
     }
@@ -68,10 +68,12 @@ export class AgencyClientsService {
     }
 
     //Method provisional
+    /*
     //Update HiredService
     update(id: number, updateHiredServiceDto: HiredService): Observable<HiredService> {
         return this.http.put<HiredService>(`${this.basePath}/${id}`, JSON.stringify(updateHiredServiceDto), this.httpOptions)
             .pipe(retry(2),
                 catchError(this.handleError));
     }
+    */
 }

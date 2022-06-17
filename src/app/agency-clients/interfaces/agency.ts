@@ -3,10 +3,11 @@ export interface Agency {
     name: string;
     email: string;
     password: string;
-    phoneNumber: string;
+    phoneNumber: number;
     description: string;
     location: string;
     ruc: string;
+    registeredAt: string;
     photo: string;
     score: string;
 }

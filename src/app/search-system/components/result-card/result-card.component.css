@@ -44,11 +44,6 @@ mat-card {
     align-items: center;
     gap: 8px;
 }
-
-a {
-    text-decoration: none;
-    cursor: pointer;
-}
 @media only screen and (max-width: 640px) {
     .divider {
         flex-direction: column;
