@@ -26,12 +26,16 @@ export class ServiceProfileTouristService {
         const URL = `https://fake-api-go2climb.herokuapp.com/customers/${id}`;
         return this.http.put<any>(URL, data);
     }
-    createAgencyReview(id: string, data: any): Observable<any>{
-        const URL = `https://fake-api-go2climb.herokuapp.com/agencyReviews/${id}`;
+    updateHiredService(id: string, data: any): Observable<any>{
+        const URL = `https://fake-api-go2climb.herokuapp.com/hiredServices/${id}`;
+        return this.http.put<any>(URL, data);
+    }
+    createAgencyReview(data: any): Observable<any>{
+        const URL = `https://fake-api-go2climb.herokuapp.com/agencyReviews`;
         return this.http.post<any>(URL, data);
     }
-    createServiceReview(id: string, data: any):Observable<any>{
-        const URL = `https://fake-api-go2climb.herokuapp.com/serviceReviews/${id}`;
+    createServiceReview(data: any):Observable<any>{
+        const URL = `https://fake-api-go2climb.herokuapp.com/serviceReviews`;
         return this.http.post<any>(URL, data);
     }
     getInfoUserById(id: string): Observable<any> {

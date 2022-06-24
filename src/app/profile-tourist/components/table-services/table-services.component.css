@@ -73,6 +73,15 @@
 .btn{
     width: 219px;
     height: 35px;
+    border-radius: 15px;
+    background-color: #9CD4E7;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+.btn-disabled{
+    width: 219px;
+    height: 35px;
     color: #C4C4C4;
     border-radius: 15px;
     border: 1px solid #C4C4C4;

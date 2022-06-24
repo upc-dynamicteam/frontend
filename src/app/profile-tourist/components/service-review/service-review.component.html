@@ -1,1 +1,61 @@
-<p>service-review works!</p>
+<div class="modal-one" id = "modal-1">
+    <div class="modal-content-one">
+        <div class="content-header">
+            <span class="close" id = "close" (click) = "close()">&times;</span>
+            <h1>Reseña del servicio</h1>
+        </div>
+        <hr>
+        <div class="content-info">
+            <p>Puntuación general del servicio</p>
+            <span>Ingrese una puntuación de 0 a 5</span>
+        </div>
+        <div class="content-inputs">
+            <input type="number" [(ngModel)] = "reviewService.score">
+            <textarea name="" id="" cols="30" rows="10" [(ngModel)] = "reviewService.comment"></textarea>
+        </div>
+        <div class="content-button">
+            <button class = "btn" (click) = "openModalTwo()">Continuar</button>
+        </div>
+    </div>
+</div>
+<div class="modal-two" id = "modal-2">
+    <div class="modal-content-two">
+        <div class="content-header-2">
+            <span class="close" id = "close2" (click) = "close2()">&times;</span>
+            <h1>Reseña de la agencia</h1>
+        </div>
+        <hr>
+        <div class="content-info">
+            <p>Puntuación general de la agencia</p>
+            <span>Ingrese una puntuación de 0 a 5</span>
+        </div>
+        <div class="container-inputs">
+            <div class="container-inputs-element">
+                <p>Profesionalismo</p>
+                <input type="number" [(ngModel)] = "reviewAgency.professionalismScore">
+            </div>
+            <div class="container-inputs-element">
+                <p>Seguridad</p>
+                <input type="number" [(ngModel)] = "reviewAgency.securityScore">
+            </div>
+        </div>
+        <div class="container-inputs">
+            <div class="container-inputs-element">
+                <p>Calidad/Precio</p>
+                <input type="number" [(ngModel)] = "reviewAgency.qualityScore">
+            </div>
+            <div class="container-inputs-element">
+                <p>Costos</p>
+                <input type="number" [(ngModel)] = "reviewAgency.costScore">
+            </div>
+        </div>
+        <div class="content-textarea">
+            <p>Comentario</p>
+            <textarea  [(ngModel)] = "reviewAgency.comment"></textarea>
+        </div>
+        <div class="container-buttons">
+            <button (click) = "finishFirst()" class = "btn-2">Omitir</button>
+            <button (click) = "finishCompleteReview()" class = "btn">Finalizar</button>
+        </div>
+    </div>
+</div>

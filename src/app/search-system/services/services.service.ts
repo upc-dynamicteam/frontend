@@ -8,7 +8,7 @@ import { Service } from "../interfaces/service";
 })
 export class ServicesService {
     //Agencies EndPoint
-    basePath = 'http://localhost:3000/api/v1/services'
+    basePath = 'https://fake-api-go2climb.herokuapp.com/services'
 
     constructor(private http: HttpClient) { }
 
