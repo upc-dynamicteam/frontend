@@ -11,7 +11,31 @@ export class ServiceProfileTouristService {
     constructor(private http: HttpClient) { }
 
     getServicesByUser(id: string): Observable<any> {
-        const URL = `http://localhost:3000/api/v1/servicesHired?idUser=${id}`;
+        const URL = `https://fake-api-go2climb.herokuapp.com/hiredServices?customerId=${id}`;
+        return this.http.get<any>(URL);
+    }
+    getServiceInfoById(id: string): Observable<any> {
+        const URL = `https://fake-api-go2climb.herokuapp.com/services/${id}`;
+        return this.http.get<any>(URL);
+    }
+    getAgencyInfoById(id: string): Observable<any> {
+        const URL = `https://fake-api-go2climb.herokuapp.com/agencies/${id}`;
+        return this.http.get<any>(URL);
+    }
+    updateInfoUser(id: string, data: any): Observable<any>{
+        const URL = `https://fake-api-go2climb.herokuapp.com/customers/${id}`;
+        return this.http.put<any>(URL, data);
+    }
+    createAgencyReview(id: string, data: any): Observable<any>{
+        const URL = `https://fake-api-go2climb.herokuapp.com/agencyReviews/${id}`;
+        return this.http.post<any>(URL, data);
+    }
+    createServiceReview(id: string, data: any):Observable<any>{
+        const URL = `https://fake-api-go2climb.herokuapp.com/serviceReviews/${id}`;
+        return this.http.post<any>(URL, data);
+    }
+    getInfoUserById(id: string): Observable<any> {
+        const URL = `https://fake-api-go2climb.herokuapp.com/customers/${id}`;
         return this.http.get<any>(URL);
     }
 

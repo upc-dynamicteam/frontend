@@ -1,1 +1,11 @@
-<p>update-profile works!</p>
+<div class="modal" id = "modal-update">
+    <div class="modal-content">
+        <h1>Modificar informacion personal</h1>
+        <input type="text" value = "{{userInfo.name}}" [(ngModel)] = "userInfo.name" >
+        <input type="text" value = "{{userInfo.lastName}}" [(ngModel)] = "userInfo.lastName">
+        <input type="email" value = "{{userInfo.email}}" [(ngModel)] = "userInfo.email">
+        <input type="text" value = "{{userInfo.phoneNumber}}" [(ngModel)] = "userInfo.phoneNumber">
+        <input type="text" value = "{{userInfo.country}}" [(ngModel)] = "userInfo.country">
+        <button (click) = "hideModalUpdate()">Guardar cambios</button>
+    </div>
+</div>

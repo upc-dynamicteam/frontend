@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -11,5 +11,16 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  @Input()
+  userInfo: any = {}
+
+  showUpdateModal(){
+      let element = document.getElementById("show")!
+      let child = element.firstElementChild!
+      let x = (child as HTMLElement).style.display = "block"
+
+  }
+
 
 }

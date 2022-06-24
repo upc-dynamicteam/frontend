@@ -1,18 +1,19 @@
 <article class = "container">
     <img src="https://yt3.ggpht.com/ytc/AKedOLQMSrgxItPwy1gW4nke8tyEXNImWjwt3upFTg7g=s900-c-k-c0x00ffffff-no-rj" alt="Photo Profile" class = "img-icon">
     <div class="user-info">
-        <p>Paolo Cisneros</p>
-        <p class = "p-12">correoprueba@gmail.com</p>
+        <p>{{userInfo.name}} {{userInfo.lastName}}</p>
+        <p class = "p-12">{{userInfo.email}}</p>
     </div>
     <div class="user-info">
-        <p class = "weight">Teléfono</p>
-        <p>+51 952145124</p>
+        <p class = "weight"></p>
+        <p>+51 {{userInfo.phoneNumber}}</p>
     </div>
     <div class="user-info">
         <p class = "weight">País</p>
-        <p>Perú</p>
+        <p>{{userInfo.country}}</p>
     </div>
     <div class="flex-center">
-        <button class = "btn">Editar Información</button>
+        <button class = "btn" (click) = "showUpdateModal()">Editar Información</button>
     </div>
+    <app-update-profile id = "show" [userInfo]="userInfo"></app-update-profile>
 </article>

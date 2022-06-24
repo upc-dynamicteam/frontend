@@ -16,10 +16,10 @@
             <div class = "article-table-data">
                 <div class="article-table-data-info">
                     <p>Número del servicio: {{service.numberService}}</p>
-                    <p>Hora y fecha de la solicitud: {{service.dateService}}</p>
+                    <p>Hora y fecha de la solicitud: {{service.scheduleDate}}</p>
                 </div>
                 <div class="article-table-data-info">
-                    <p>Agencia: {{service.agencie}}</p>
+                    <p>Agencia: {{service.infoAgency.name}}</p>
                 </div>
                 <div class="article-table-data-info">
                     <p>Importe total: </p>
@@ -28,11 +28,11 @@
             </div> <!-- Fin de article table data -->
             <div class = "article-table-data-extra">
                 <div class = "article-table-data-extra-info flex">
-                    <img src="{{service.img}}" alt="" class = "img-service">
-                    <p class = "ml-10">{{service.infoService}}</p>
+                    <img src="{{service.infoService.photos}}" alt="" class = "img-service">
+                    <p class = "ml-10">{{service.infoService.name}}</p>
                 </div>
                 <div class = "article-table-data-extra-info">
-                    <p>{{service.state}}</p>
+                    <p>{{service.status}}</p>
                 </div>
                 <div class = "article-table-data-extra-info">
                     <button class = "btn">Calificar Servicio</button>

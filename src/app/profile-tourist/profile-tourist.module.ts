@@ -7,6 +7,7 @@ import {profileTouristRoutingModule} from "./profile-tourist-routing.module";
 import {PageProfileTouristComponent} from "./pages/page-profile-tourist/page-profile-tourist.component";
 import { UpdateProfileComponent } from './components/update-profile/update-profile.component';
 import { ServiceReviewComponent } from './components/service-review/service-review.component';
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -24,6 +25,7 @@ import { ServiceReviewComponent } from './components/service-review/service-revi
     ],
   imports: [
       CommonModule,
+      FormsModule,
       profileTouristRoutingModule
   ]
 })
