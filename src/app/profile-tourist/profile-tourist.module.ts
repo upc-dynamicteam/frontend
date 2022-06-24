@@ -5,6 +5,8 @@ import { TableServicesComponent } from './components/table-services/table-servic
 import { ServiceHiredComponent } from './components/service-hired/service-hired.component';
 import {profileTouristRoutingModule} from "./profile-tourist-routing.module";
 import {PageProfileTouristComponent} from "./pages/page-profile-tourist/page-profile-tourist.component";
+import { UpdateProfileComponent } from './components/update-profile/update-profile.component';
+import { ServiceReviewComponent } from './components/service-review/service-review.component';
 
 
 
@@ -13,7 +15,9 @@ import {PageProfileTouristComponent} from "./pages/page-profile-tourist/page-pro
       ProfileComponent,
       TableServicesComponent,
       ServiceHiredComponent,
-      PageProfileTouristComponent
+      PageProfileTouristComponent,
+      UpdateProfileComponent,
+      ServiceReviewComponent
     ],
     exports: [
         PageProfileTouristComponent
