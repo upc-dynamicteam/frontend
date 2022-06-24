@@ -16,6 +16,8 @@ export class ServiceReviewComponent implements OnInit {
     agencyId: string = ""
     @Input()
     customerId: string = ""
+    @Input()
+    service: any = {}
 
     reviewService : any = {
         "serviceId": 0,
@@ -56,7 +58,7 @@ export class ServiceReviewComponent implements OnInit {
 
       this.serviceProfileTourist.createServiceReview(this.reviewService).subscribe(() => {
       })
-
+        this.updateService()
       this.reviewService = {
           "serviceId": 0,
           "score": 0,
@@ -64,6 +66,21 @@ export class ServiceReviewComponent implements OnInit {
       }
       let modalTwo = document.getElementById("modal-2")!
       modalTwo.style.display = "none";
+  }
+  updateService(){
+      let update  = {
+          "id": "r1",
+          "customerId": this.customerId,
+          "serviceId": this.serviceId,
+          "amount": this.service.amount,
+          "numberService": this.service.numberService,
+          "scheduleDate": this.service.scheduleDate,
+          "status": "Finalizado",
+          "price": this.service.price
+      }
+      this.serviceProfileTourist.updateHiredService(update.id, update).subscribe(() => {
+
+      })
   }
   finishCompleteReview(){
       let date = new Date()
@@ -75,6 +92,7 @@ export class ServiceReviewComponent implements OnInit {
       this.serviceProfileTourist.createAgencyReview(this.reviewAgency).subscribe(() => {
       })
       this.finishFirst()
+      this.updateService()
 
   }
 

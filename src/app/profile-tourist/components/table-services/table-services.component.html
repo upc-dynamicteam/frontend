@@ -36,14 +36,14 @@
                 </div>
                 <div class = "article-table-data-extra-info">
                     <div *ngIf = "service.status == 'En proceso';else disabledButton">
-                        <button class = "btn" (click) = "openReview(service.infoService.id, service.infoAgency.id)">Calificar Servicio</button>
+                        <button class = "btn" (click) = "openReview(service.infoService.id, service.infoAgency.id, service)">Calificar Servicio</button>
                     </div>
                     <ng-template #disabledButton>
                         <button class = "btn-disabled" disabled>Calificar Servicio</button>
                     </ng-template>
                 </div>
             </div>
-            <app-service-review [serviceId]="serviceId" [agencyId] = "agencyId" [customerId]="customerId" id = "review"></app-service-review>
+            <app-service-review [service] = "service" [serviceId]="serviceId" [agencyId] = "agencyId" [customerId]="customerId" id = "review"></app-service-review>
         </article>
     </section>
     <ng-template #noServices>

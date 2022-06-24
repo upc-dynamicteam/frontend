@@ -9,18 +9,21 @@ export class TableServicesComponent implements OnInit {
 
     @Input()
     servicesUser: any = []
-    serviceId: string = ""
-    agencyId: string = ""
     @Input()
     customerId: string = ""
 
+
+    serviceId: string = ""
+    agencyId: string = ""
+    service: any  = {}
   constructor() { }
 
   ngOnInit(): void {
   }
-  openReview(idService: string, idAgency: string){
+  openReview(idService: string, idAgency: string, service: string){
         this.serviceId = idService
         this.agencyId = idAgency
+        this.service = service
         let review = document.getElementById("review")!
         let child = review.firstElementChild!
         let x = (child as HTMLElement).style.display = "block"
