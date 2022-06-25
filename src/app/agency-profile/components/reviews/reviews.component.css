@@ -22,3 +22,20 @@
     font-size: 20px;
     font-weight: 700;
 }
+.img-card{
+    width: 49px;
+    height: 49px;
+    border-radius: 24.5px;
+}
+.flex-content{
+    display: flex;
+}
+.flex-content img{
+    margin-right: 15px;
+}
+.info-review p{
+    margin: 0;
+}
+.element-service{
+    margin-top: 5px;
+}

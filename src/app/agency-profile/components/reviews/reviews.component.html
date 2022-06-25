@@ -1,21 +1,25 @@
 <div class="container-general-reviews">
     <h1 class = "title">Reseñas</h1>
-    <div class="container-score">
+    <!--<div class="container-score">
         <p>Profesionalismo</p>
         <p>Calidad-Precio</p>
     </div>
     <div class="container-score">
         <p>Seguridad</p>
         <p>Costos</p>
-    </div>
+    </div>-->
     <div class="container-commentary">
         <article *ngFor=" let element of listReviews">
             <div class="element-service">
-                <img src="{{element.imgUrl}}" alt="" class = "img-card">
-                <p class = "element-description-commentary">{{element.Name}}</p>
-                <p class = "element-description">{{element.Date}}</p>
+                <div class="flex-content">
+                    <img src="{{element.customerInfo.photo}}" alt="" class = "img-card">
+                    <div class="info-review">
+                        <p class = "element-description-commentary">{{element.customerInfo.name}}</p>
+                        <p class = "element-description">{{element.date}}</p>
+                    </div>
+                </div>
                 <div class="container-prices">
-                    <p class = "element-description">{{element.Text}}</p>
+                    <p class = "element-description">{{element.comment}}</p>
                 </div>
             </div>
         </article>

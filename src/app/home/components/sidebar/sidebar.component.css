@@ -5,8 +5,12 @@
     background-color: white;
     border-radius: 20px;
     padding: 10px;
+    position: fixed;
 }
-
+.flex{
+    display: flex;
+    flex-direction: column;
+}
 .left-align {
     text-align: left;
 }

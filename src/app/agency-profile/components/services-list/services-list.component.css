@@ -6,9 +6,11 @@
     width: 945px;
 }
 .container-services{
-    display: flex;
+    /*display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 100%;*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 .element-service{
     display: flex;
@@ -25,6 +27,7 @@
     width: 205px;
     height: 114px;
     border-radius: 20px;
+    cursor: pointer;
 }
 .container-prices{
     display: flex;

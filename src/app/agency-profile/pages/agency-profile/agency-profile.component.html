@@ -1,9 +1,9 @@
 <div class="container">
 <div class="sidebar">
-   <app-agency-information></app-agency-information>
+   <app-agency-information [agencyData]="agencyData"></app-agency-information>
 </div>
     <div class="profilePage">
-        <app-services-list></app-services-list>
-        <app-reviews></app-reviews>
+        <app-services-list [listServices]="listServices"></app-services-list>
+        <app-reviews [listReviews]="listReviews"></app-reviews>
     </div>
 </div>

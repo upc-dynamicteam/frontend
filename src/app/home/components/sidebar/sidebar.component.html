@@ -1,13 +1,11 @@
 <div class="content">
     <mat-selection-list #shoes [multiple]="false">
         <div mat-subheader>Categorías</div>
-        <mat-list-item *ngFor="let categorie of categories">
-            <button class="left-align" mat-flat-button mat-line>{{categorie.name}}</button>
-        </mat-list-item>
+        <div class="flex">
+            <a href = "#offers" class="left-align" mat-flat-button mat-line>Ofertasl de día</a>
+            <a href = "#populars" class="left-align" mat-flat-button mat-line>Populares</a>
+            <a href = "#for-you" class="left-align" mat-flat-button mat-line>Para ti</a>
+        </div>
         <mat-divider></mat-divider>
-        <div mat-subheader>Vuelos</div>
-        <mat-list-item *ngFor="let flight of flights">
-            <button class="left-align" mat-flat-button mat-line>{{flight.name}}</button>
-        </mat-list-item>
     </mat-selection-list>
 </div>

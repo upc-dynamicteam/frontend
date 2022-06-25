@@ -6,6 +6,7 @@ import {AgencyProfileComponent} from "./pages/agency-profile/agency-profile.comp
 import {MatCardModule} from "@angular/material/card";
 import {AgencyProfileRoutingModule} from "./agency-profile-routing.module";
 import {AgencyClientsModule} from "../agency-clients/agency-clients.module";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import {AgencyClientsModule} from "../agency-clients/agency-clients.module";
     imports: [
         CommonModule,
         MatCardModule,
+        FormsModule,
         AgencyProfileRoutingModule,
         AgencyClientsModule
     ]

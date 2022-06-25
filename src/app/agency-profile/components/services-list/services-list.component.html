@@ -7,25 +7,8 @@
     <div class="container-services">
         <article *ngFor=" let element of listServices">
             <div class="element-service">
-                <img src="{{element.imgUrl}}" alt="" class = "img-card">
+                <img src="{{element.photos}}" (click) = "goToService(element.id)" alt="" class = "img-card">
                 <p class = "element-description">{{element.description}}</p>
-                <img src="../../../../assets/img/starts.PNG" alt="">
-                <div class="container-prices">
-                    <p>${{element.priceNormal.toFixed(2)}}</p>
-                    <p>${{element.priceOffer.toFixed(2)}}</p>
-                </div>
-            </div>
-        </article>
-    </div>
-    <div class="container-services">
-        <article *ngFor=" let element of listServices2">
-            <div class="element-service">
-                <img src="{{element.imgUrl}}" alt="" class = "img-card">
-                <p class = "element-description">{{element.description}}</p>
-                <img src="../../../../assets/img/starts.PNG" alt="">
-                <div class="container-prices">
-                    <p>${{element.price.toFixed(2)}}</p>
-                </div>
             </div>
         </article>
     </div>

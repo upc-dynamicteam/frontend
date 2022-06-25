@@ -8,7 +8,7 @@ import { HiredService } from "../interfaces/hired-service";
 })
 export class AgencyClientsService {
     //HiredService EndPoint
-    basePath = 'http://localhost:3000/api/v1/hiredServices'
+    basePath = 'https://fake-api-go2climb.herokuapp.com/hiredServices'
     constructor(private http: HttpClient) { }
 
     //HTTP Default options

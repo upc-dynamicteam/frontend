@@ -6,9 +6,8 @@
     width: 945px;
 }
 .container-offers{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 .element-offer{
     display: flex;

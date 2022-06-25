@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import { AgenciesService } from "../../services/agencies.service";
 import { Agency } from "../../interfaces/agency";
 
@@ -11,7 +11,10 @@ export class AgencyInformationComponent implements OnInit {
 
   constructor(private agenciesService: AgenciesService) { }
 
-  agencyData!: Agency;
+     @Input()
+     agencyData: any = {}
+
+  //agencyData!: Agency;
   defaultPhoto: string = "/assets/img/perfil-empty.png";
 
   editedImage: any;
@@ -26,7 +29,7 @@ export class AgencyInformationComponent implements OnInit {
   phoneNumber!: string;
 
   ngOnInit(): void {
-      this.getAgencyData("a1");
+
   }
 
   getAgencyData(id: string) {
