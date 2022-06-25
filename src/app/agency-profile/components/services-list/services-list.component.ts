@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 @Component({
   selector: 'app-services-list',
   templateUrl: './services-list.component.html',
@@ -8,12 +8,20 @@ import {Router} from "@angular/router";
 export class ServicesListComponent{
     @Input()
     listServices: any = []
-    constructor( private router: Router){
+    idAgency: string = ""
+
+    constructor( private activatedRoute: ActivatedRoute, private router: Router){
 
     }
     ngOnInit(): void{
+        this.activatedRoute.params.subscribe(({id}) => {
+            this.idAgency = id
+        })
     }
     goToService(id: string) {
         this.router.navigate([`service/${id}`]);
+    }
+    goToAddService(id: string){
+        this.router.navigate([`profile-agency/${this.idAgency}/add-service`])
     }
 }

@@ -1,8 +1,7 @@
 <div class="container-general-services">
     <h1 class = "title">Servicios</h1>
     <div class="buttons">
-        <button class="btn">Ofertas</button>
-        <button class="btn2">+</button>
+        <button class="btn2" (click) = "goToAddService(idAgency)">Agregar Servicio</button>
     </div>
     <div class="container-services">
         <article *ngFor=" let element of listServices">

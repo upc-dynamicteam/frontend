@@ -56,10 +56,15 @@
     display: flex;
     border-radius: 10px;
     background-color: #9CD4E7;
+    font-weight: bold;
 }
 .btn2 {
     display: flex;
     align-content: end;
     border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
     background-color: #9CD4E7;
+    cursor: pointer;
 }
