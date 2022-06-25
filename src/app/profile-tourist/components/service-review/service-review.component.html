@@ -10,7 +10,7 @@
             <span>Ingrese una puntuación de 0 a 5</span>
         </div>
         <div class="content-inputs">
-            <input type="number" [(ngModel)] = "reviewService.score">
+            <input min = "1" max = "5" type="number" [(ngModel)] = "reviewService.score">
             <textarea name="" id="" cols="30" rows="10" [(ngModel)] = "reviewService.comment"></textarea>
         </div>
         <div class="content-button">
@@ -32,21 +32,21 @@
         <div class="container-inputs">
             <div class="container-inputs-element">
                 <p>Profesionalismo</p>
-                <input type="number" [(ngModel)] = "reviewAgency.professionalismScore">
+                <input min = "1" max = "5"  type="number" [(ngModel)] = "reviewAgency.professionalismScore">
             </div>
             <div class="container-inputs-element">
                 <p>Seguridad</p>
-                <input type="number" [(ngModel)] = "reviewAgency.securityScore">
+                <input min = "1" max = "5"  type="number" [(ngModel)] = "reviewAgency.securityScore">
             </div>
         </div>
         <div class="container-inputs">
             <div class="container-inputs-element">
                 <p>Calidad/Precio</p>
-                <input type="number" [(ngModel)] = "reviewAgency.qualityScore">
+                <input min = "1" max = "5"  type="number" [(ngModel)] = "reviewAgency.qualityScore">
             </div>
             <div class="container-inputs-element">
                 <p>Costos</p>
-                <input type="number" [(ngModel)] = "reviewAgency.costScore">
+                <input min = "1" max = "5"  type="number" [(ngModel)] = "reviewAgency.costScore">
             </div>
         </div>
         <div class="content-textarea">

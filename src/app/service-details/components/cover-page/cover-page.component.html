@@ -1,24 +1,19 @@
 <mat-card class="top-card">
   <mat-card-header>
-    <mat-card-title>Deporte de aventura</mat-card-title>
+    <mat-card-title>{{infoService.name}}</mat-card-title>
     <mat-card-subtitle>Lugar</mat-card-subtitle>
   </mat-card-header>
-  <mat-grid-list cols="4" rowHeight="150px">
-    <mat-grid-tile
-      *ngFor="let image of images; let index = index;"
-      [colspan]="image.cols"
-      [rowspan]="image.rows">
-      <img class="profile-image" src="https://picsum.photos/200/{{300 + index}}" alt="">
-    </mat-grid-tile>
+  <mat-grid-list cols="4" >
+      <img class="profile-image" src="{{infoService.photos}}" alt="">
   </mat-grid-list>
   <mat-card-header class="agency-info">
-    <div mat-card-avatar class="profile-image"></div>
-    <mat-card-title>Ofrecido por </mat-card-title>
-    <mat-card-subtitle>Agencia registrada desde </mat-card-subtitle>
+    <!--<div mat-card-avatar class="profile-image"></div>-->
+    <mat-card-title>Ofrecido por {{agencyInfo.name}} </mat-card-title>
+    <mat-card-subtitle>Servicio registrado desde el {{infoService.creationDate}} </mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eius facere fugit nulla omnis qui.
+     {{infoService.description}}
     </p>
   </mat-card-content>
 </mat-card>

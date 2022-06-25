@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {DatePipe} from "@angular/common";
+import {ServiceServiceAgencyService} from "../../services/service-service-agency.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-information',
@@ -8,13 +10,19 @@ import {DatePipe} from "@angular/common";
 })
 export class InformationComponent implements OnInit {
   title = 'Service Details';
-  information: Info[] = [];
+  infoService: any = {}
+  constructor(private serviceServiceInfo: ServiceServiceAgencyService, private activatedRoute: ActivatedRoute) {
+
+  }
+
 
   ngOnInit() :void {
-    this.information = [
-      {title: "Lorem1", subtitle: "Activity1", description: "Description1"},
-      {title: "Lorem2", subtitle: "Activity2", description: "Description2"}
-    ];
+      this.activatedRoute.params.subscribe(({id}) => {
+          this.serviceServiceInfo.getInfoServiceById(id).subscribe((data) => {
+              this.infoService = data
+              console.log(this.infoService)
+          })
+      })
   }
 }
 export interface Info {

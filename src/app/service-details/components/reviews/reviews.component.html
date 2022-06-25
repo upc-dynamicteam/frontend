@@ -2,14 +2,21 @@
   <mat-card-header>
     <mat-card-title>Reseñas</mat-card-title>
   </mat-card-header>
-  <mat-card-header class="agency-info">
-    <img mat-card-avatar class="image" src="https://picsum.photos/200/{{300}}" alt="">
-    <mat-card-title>Nombre completo </mat-card-title>
-    <mat-card-subtitle>Fecha: </mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eius facere fugit nulla omnis qui.
-    </p>
-  </mat-card-content>
+    <div *ngFor = "let review of reviews">
+        <mat-card-header class="agency-info" >
+            <img mat-card-avatar class="image" src="{{review.infoCustomer.photo}}" alt="">
+            <mat-card-title>{{review.infoCustomer.name}} {{review.infoCustomer.lastName}} </mat-card-title>
+            <mat-card-subtitle>Fecha: {{review.date}} </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <!--Service rate-->
+            <mat-icon class="icon-service"
+                      *ngFor="let i of calc(review.score, 0);">star</mat-icon>
+            <mat-icon class="icon-service"
+                      *ngFor="let i of calc(review.score, 1);">star_border</mat-icon>
+            <p>
+                {{review.comment}}
+            </p>
+        </mat-card-content>
+    </div>
 </mat-card>

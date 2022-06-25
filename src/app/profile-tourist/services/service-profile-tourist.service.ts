@@ -28,7 +28,7 @@ export class ServiceProfileTouristService {
     }
     updateHiredService(id: string, data: any): Observable<any>{
         const URL = `https://fake-api-go2climb.herokuapp.com/hiredServices/${id}`;
-        return this.http.put<any>(URL, data);
+        return this.http.patch<any>(URL, data);
     }
     createAgencyReview(data: any): Observable<any>{
         const URL = `https://fake-api-go2climb.herokuapp.com/agencyReviews`;

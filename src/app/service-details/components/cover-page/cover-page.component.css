@@ -3,6 +3,7 @@
   border-radius: 2%;
   max-width: 90%;
   margin-bottom: 20px;
+    margin-top: 15px;
 }
 .image {
   object-fit: cover;
@@ -11,9 +12,13 @@
 }
 .profile-image {
   background-image: url('https://picsum.photos/200/600');
-  background-size: cover;
 }
 .agency-info {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+@media only screen and (min-width: 798px) and (max-width: 1800px){
+    .profile-image{
+        height: 500px;
+    }
 }

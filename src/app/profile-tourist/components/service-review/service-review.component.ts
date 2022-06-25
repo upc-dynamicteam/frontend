@@ -18,11 +18,15 @@ export class ServiceReviewComponent implements OnInit {
     customerId: string = ""
     @Input()
     service: any = {}
+    @Input()
+    hiredServiceId: string = ""
 
     reviewService : any = {
         "serviceId": 0,
         "score": 0,
-        "comment": ""
+        "comment": "",
+        "customerId": 0,
+        "date": ""
     }
     reviewAgency: any = {
         "date": "",
@@ -54,7 +58,11 @@ export class ServiceReviewComponent implements OnInit {
       modalTwo.style.display = "block";
   }
   finishFirst(){
+      let date = new Date()
+      let actualDate = date.getDay() + "/" + date.getMonth() + "/" + date.getFullYear()
       this.reviewService.serviceId = this.serviceId
+      this.reviewService.customerId = this.customerId
+      this.reviewService.date = actualDate
 
       this.serviceProfileTourist.createServiceReview(this.reviewService).subscribe(() => {
       })
@@ -62,25 +70,20 @@ export class ServiceReviewComponent implements OnInit {
       this.reviewService = {
           "serviceId": 0,
           "score": 0,
-          "comment": ""
+          "comment": "",
+          "customerId": 0
       }
       let modalTwo = document.getElementById("modal-2")!
       modalTwo.style.display = "none";
   }
   updateService(){
       let update  = {
-          "id": "r1",
-          "customerId": this.customerId,
-          "serviceId": this.serviceId,
-          "amount": this.service.amount,
-          "numberService": this.service.numberService,
-          "scheduleDate": this.service.scheduleDate,
-          "status": "Finalizado",
-          "price": this.service.price
+          "id": this.hiredServiceId,
+          "status": "Finalizado"
       }
+      console.log(update)
       this.serviceProfileTourist.updateHiredService(update.id, update).subscribe(() => {
-
-      })
+        })
   }
   finishCompleteReview(){
       let date = new Date()

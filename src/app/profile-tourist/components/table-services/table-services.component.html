@@ -28,7 +28,7 @@
             </div> <!-- Fin de article table data -->
             <div class = "article-table-data-extra">
                 <div class = "article-table-data-extra-info flex">
-                    <img src="{{service.infoService.photos}}" alt="" class = "img-service">
+                    <img src="{{service.infoService.photos}}" (click) = goToService(service.infoService.id)  alt="" class = "img-service">
                     <p class = "ml-10">{{service.infoService.name}}</p>
                 </div>
                 <div class = "article-table-data-extra-info">
@@ -36,14 +36,14 @@
                 </div>
                 <div class = "article-table-data-extra-info">
                     <div *ngIf = "service.status == 'En proceso';else disabledButton">
-                        <button class = "btn" (click) = "openReview(service.infoService.id, service.infoAgency.id, service)">Calificar Servicio</button>
+                        <button class = "btn" (click) = "openReview(service.infoService.id, service.infoAgency.id, service, service.id)">Calificar servicio</button>
                     </div>
                     <ng-template #disabledButton>
-                        <button class = "btn-disabled" disabled>Calificar Servicio</button>
+                        <button class = "btn-disabled" disabled>Servicio ya  calificado</button>
                     </ng-template>
                 </div>
             </div>
-            <app-service-review [service] = "service" [serviceId]="serviceId" [agencyId] = "agencyId" [customerId]="customerId" id = "review"></app-service-review>
+            <app-service-review [hiredServiceId] = "hiredServiceId" [service] = "service" [serviceId]="serviceId" [agencyId] = "agencyId" [customerId]="customerId" id = "review"></app-service-review>
         </article>
     </section>
     <ng-template #noServices>

@@ -8,3 +8,8 @@
   background-image: url('https://picsum.photos/200/600');
   background-size: cover;
 }
+.icon-service {
+    color: #ffd156;
+    font-size: 1.5rem;
+    width: auto;
+}

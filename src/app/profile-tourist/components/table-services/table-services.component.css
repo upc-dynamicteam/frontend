@@ -63,6 +63,7 @@
     width: 129px;
     border-radius: 20px;
     height: 72px;
+    cursor: pointer;
 }
 .flex{
     display: flex;
