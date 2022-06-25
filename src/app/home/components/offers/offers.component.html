@@ -1,14 +1,13 @@
-<div class="container-general-offers">
+<div class="container-general-offers"  >
     <h1 class = "title">Ofertas del día</h1>
     <div class="container-offers">
         <article *ngFor=" let element of listOffers">
             <div class="element-offer">
-                <img src="{{element.imgUrl}}" alt="" class = "img-card">
+                <img src="{{element.photos}}" (click) = "goToService(element.id)" alt="" class = "img-card">
                 <p class = "element-description">{{element.description}}</p>
-                <img src="../../../../assets/img/starts.PNG" alt="">
                 <div class="container-prices">
-                    <p>${{element.priceNormal.toFixed(2)}}</p>
-                    <p>${{element.priceOffer.toFixed(2)}}</p>
+                    <p>${{element.price.toFixed(2)}}</p>
+                    <p>${{element.newPrice.toFixed(2)}}</p>
                 </div>
             </div>
         </article>

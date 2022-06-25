@@ -24,6 +24,7 @@
 .img-card{
     width: 205px;
     height: 114px;
+    cursor: pointer;
     border-radius: 20px;
 }
 .container-prices{

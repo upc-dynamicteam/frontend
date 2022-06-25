@@ -29,10 +29,6 @@
 .container-prices{
     display: flex;
 }
-.container-prices p:first-child{
-    margin-right: 20px;
-    text-decoration-line: line-through;
-}
 .container-prices p {
     font-size: 16px;
     font-weight: 700;

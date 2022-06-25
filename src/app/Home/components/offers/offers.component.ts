@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {ServiceOffer} from "../../interfaces/service-offer";
+import {ServiceHomeService} from "../../services/service-home.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-offers',
@@ -7,34 +9,21 @@ import {ServiceOffer} from "../../interfaces/service-offer";
   styleUrls: ['./offers.component.css']
 })
 export class OffersComponent {
-    listOffers: ServiceOffer[] = [
-        {
-            imgUrl: "https://dr5dymrsxhdzh.cloudfront.net/blog/images/ac0d827e4/2015/11/cost_of_living_in_colorado_1.jpg",
-            description: "Disfruta de una aventura en la montaña el Huascarán",
-            starts: 4,
-            priceNormal: 500,
-            priceOffer: 480
-        },
-        {
-            imgUrl: "https://p4.wallpaperbetter.com/wallpaper/308/429/124/himalayas-clouds-landscape-mountains-wallpaper-preview.jpg",
-            description: "Alpinismo para principiantes en el Huascarán, se parte de la aventura de vivir",
-            starts: 4,
-            priceNormal: 600,
-            priceOffer: 550
-        },
-        {
-            imgUrl: "https://ich.unesco.org/img/photo/thumb/12629-HUG.jpg",
-            description: "Expedición para alpinisitas en El Huascarán. Oferta limitada por temporada",
-            starts: 4,
-            priceNormal: 400,
-            priceOffer: 390
-        },
-        {
-            imgUrl: "https://www.thyon.ch/UserFiles/local-miniatures/UserFiles/File/Annuaire/annuaire_produits/guid/thumbresize/1920-/guide-montagne.jpg",
-            description: "Pasa un buen rato en familia en el Huascarán, más de 10 actividades que puedes realizar",
-            starts: 4,
-            priceNormal: 800,
-            priceOffer: 785
-        }
-    ]
+
+    listOffers: any = []
+    constructor(private offerServices: ServiceHomeService, private router: Router){
+    }
+    ngOnInit(): void {
+        this.offerServices.getServicesOffer().subscribe((data) => {
+            this.listOffers = data
+            for(let i = 0; i < this.listOffers.length; i++){
+                this.listOffers[i].price = parseInt(this.listOffers[i].price)
+                this.listOffers[i].newPrice = parseInt(this.listOffers[i].newPrice)
+            }
+            console.log(data)
+        })
+    }
+    goToService(id: string) {
+        this.router.navigate([`service/${id}`]);
+    }
 }
