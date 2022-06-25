@@ -19,7 +19,6 @@ export class ForYouComponent{
                 this.listForYou[i].price = parseInt(this.listForYou[i].price)
                 this.listForYou[i].newPrice = parseInt(this.listForYou[i].newPrice)
             }
-            console.log(data)
         })
     }
     goToService(id: string) {

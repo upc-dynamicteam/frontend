@@ -19,7 +19,6 @@ export class PopularComponent{
                 this.listPopulars[i].price = parseInt(this.listPopulars[i].price)
                 this.listPopulars[i].newPrice = parseInt(this.listPopulars[i].newPrice)
             }
-            console.log(data)
         })
     }
     goToService(id: string) {

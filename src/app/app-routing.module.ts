@@ -27,7 +27,7 @@ const routes: Routes = [
         runGuardsAndResolvers: 'paramsOrQueryParamsChange'
     },
     {
-        path: "agency-profile",
+        path: "profile-agency/:id",
         loadChildren: () => import("./agency-profile/agency-profile.module").then(m => m.AgencyProfileModule)
     },
     { path: '**', redirectTo: 'home', pathMatch: 'full' }

@@ -10,12 +10,12 @@
       <table class="full-width"><tr>
         <td><mat-form-field appearance="fill">
           <mat-label>Correo</mat-label>
-          <input matInput placeholder="nombre@example.com" [formControl]="email" required>
+          <input matInput placeholder="nombre@example.com" [formControl]="email" [(ngModel)] = "userCreate.email" name = "email" required>
           <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
         </mat-form-field></td>
         <td><mat-form-field appearance="fill">
           <mat-label>Contraseña</mat-label>
-          <input matInput placeholder="*********" [type]="hide ? 'password' : 'text'" required>
+          <input matInput placeholder="*********" [type]="hide ? 'password' : 'text'"  [(ngModel)] = "userCreate.password" name = "password" required>
           <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -28,19 +28,24 @@
     <h3>Información de la cuenta</h3>
 
     <form class="form">
-      <mat-form-field class="full-width" appearance="fill">
-        <mat-label>Nombre del usuario</mat-label>
-        <input matInput required>
-      </mat-form-field>
-
+        <table class="full-width"><tr>
+            <td><mat-form-field class="full-width" appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input matInput required name = "name" [(ngModel)] = "userCreate.name">
+            </mat-form-field></td>
+            <td><mat-form-field class="full-width" appearance="fill">
+                <mat-label>Apellido</mat-label>
+                <input matInput required name = "lastName"  [(ngModel)] = "userCreate.lastName">
+            </mat-form-field></td>
+        </tr></table>
       <table class="full-width"><tr>
         <td><mat-form-field class="full-width" appearance="fill">
           <mat-label>Número de contacto</mat-label>
-          <input matInput required>
+          <input matInput required  name = "phoneNumber" [(ngModel)] = "userCreate.phoneNumber">
         </mat-form-field></td>
         <td><mat-form-field class="full-width" appearance="fill">
           <mat-label>Pais</mat-label>
-          <input matInput required>
+          <input matInput required name = "country" [(ngModel)] = "userCreate.country">
         </mat-form-field></td>
       </tr></table>
 
@@ -59,5 +64,5 @@
 </mat-dialog-content>
 
 <mat-dialog-actions align="center">
-  <button mat-raised-button color="primary" mat-dialog-close="">Finalizar</button>
+  <button mat-raised-button color="primary" mat-dialog-close="" (click) = "createAccount()">Finalizar</button>
 </mat-dialog-actions>

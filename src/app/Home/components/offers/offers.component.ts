@@ -20,7 +20,6 @@ export class OffersComponent {
                 this.listOffers[i].price = parseInt(this.listOffers[i].price)
                 this.listOffers[i].newPrice = parseInt(this.listOffers[i].newPrice)
             }
-            console.log(data)
         })
     }
     goToService(id: string) {

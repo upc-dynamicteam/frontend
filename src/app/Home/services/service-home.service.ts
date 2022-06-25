@@ -21,4 +21,16 @@ export class ServiceHomeService {
       const URL = `https://fake-api-go2climb.herokuapp.com/services`;
       return this.http.get<any>(URL);
   }
+  createAccountCustomer(data: any): Observable<any>{
+      const URL = `https://fake-api-go2climb.herokuapp.com/customers`;
+      return this.http.post<any>(URL, data);
+  }
+  createAccountAgency(data: any): Observable<any>{
+      const URL = `https://fake-api-go2climb.herokuapp.com/agencies`;
+      return this.http.post<any>(URL, data);
+  }
+  /*signIn(data): Observable<any>{
+
+  }*/
+
 }
