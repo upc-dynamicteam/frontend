@@ -56,7 +56,7 @@ export class AgencyClientsService {
 
     //Get HiredService extend information by agencyId
     getExtendInformation(agencyId: string, category: string): Observable<any> {
-        return this.http.get<any>(`http://localhost:3000/api/v1/agencies/${agencyId}/hiredServices?_expand=${category}`)
+        return this.http.get<any>(`https://fake-api-go2climb.herokuapp.com/agencies/${agencyId}/hiredServices?_expand=${category}`)
             .pipe(retry(2),
                 catchError(this.handleError));
     }

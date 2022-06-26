@@ -3,12 +3,10 @@
         <!--Table title-->
         <mat-expansion-panel-header>
             <mat-panel-title>
-                Full day Ica para toda la familia
+                <p>{{infoService.name}}</p>
             </mat-panel-title>
         </mat-expansion-panel-header>
-
         <!--Table content-->
-
         <table mat-table [dataSource]="hiredServicesData" class="mat-table-clients">
 
             <!-- Position Column -->
@@ -38,7 +36,7 @@
             <!-- Symbol Column -->
             <ng-container matColumnDef="date">
                 <th mat-header-cell *matHeaderCellDef> Fecha de salida </th>
-                <td mat-cell *matCellDef="let element"> {{element.scheduledDate}} </td>
+                <td mat-cell *matCellDef="let element"> {{element.scheduleDate}} </td>
             </ng-container>
 
             <!-- Symbol Column -->

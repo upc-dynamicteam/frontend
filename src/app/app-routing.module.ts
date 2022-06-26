@@ -14,7 +14,7 @@ const routes: Routes = [
         runGuardsAndResolvers: 'paramsOrQueryParamsChange'
     },
     {
-        path: 'clients',
+        path: 'profile-agency/:id/clients/:idService',
         loadChildren: () => import('./agency-clients/agency-clients.module').then(m => m.AgencyClientsModule )
     },
     {

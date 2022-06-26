@@ -67,4 +67,16 @@ export class AgenciesService {
             .pipe(retry(2),
                 catchError(this.handleError));
     }
+    getServiceById(id: string): Observable<any>{
+        const URL = `https://fake-api-go2climb.herokuapp.com/services/${id}`;
+        return this.http.get<any>(URL);
+    }
+    getHiredServicesByServiceId(id: string):Observable<any>{
+        const URL = `https://fake-api-go2climb.herokuapp.com/hiredServices/?serviceId=${id}`;
+        return this.http.get<any>(URL);
+    }
+    getInfoUserById(id: string):Observable<any>{
+        const URL = `https://fake-api-go2climb.herokuapp.com/customers/${id}`;
+        return this.http.get<any>(URL);
+    }
 }

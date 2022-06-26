@@ -33,4 +33,7 @@ export class ServicesListComponent{
     updateService(id: string){
         this.router.navigate([`profile-agency/${this.idAgency}/update-service/${id}`])
     }
+    getClients(id: string){
+        this.router.navigate([`profile-agency/${this.idAgency}/clients/${id}`])
+    }
 }

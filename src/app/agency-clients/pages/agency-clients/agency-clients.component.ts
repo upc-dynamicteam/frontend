@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {AgenciesService} from "../../services/agencies.service";
 
 @Component({
   selector: 'app-agency-clients',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgencyClientsComponent implements OnInit {
 
-  constructor() { }
+    agencyData: any = {}
+    serviceInfo: any = {}
+
+  constructor(private agency: AgenciesService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+      this.activatedRoute.params.subscribe(({id, idService}) => {
+            this.agency.getById(id).subscribe((data) => {
+                this.agencyData = data
+            })
+          this.agency.getServiceById(idService).subscribe((data) => {
+              this.serviceInfo = data
+          })
+      })
   }
 
 }

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AgencyClientsService } from "../../services/agency-clients.service";
 import { MatDialog } from "@angular/material/dialog";
 import {StatusDialogComponent} from "../status-dialog/status-dialog.component";
+import {ActivatedRoute} from "@angular/router";
+import {AgenciesService} from "../../services/agencies.service";
 
 @Component({
   selector: 'app-table-clients',
@@ -10,7 +12,7 @@ import {StatusDialogComponent} from "../status-dialog/status-dialog.component";
 })
 export class TableClientsComponent implements OnInit {
 
-    constructor(private agencyClientsService: AgencyClientsService, public dialog: MatDialog) {
+    constructor(private agencyClientsService: AgencyClientsService, private agencyService: AgenciesService, public dialog: MatDialog, private activatedRoute: ActivatedRoute) {
     }
 
     hiredServicesData: any = [];
@@ -20,24 +22,27 @@ export class TableClientsComponent implements OnInit {
 
     isEditMode = false;
     editData: any;
+    infoService: any = {}
 
     ngOnInit(): void {
-      this.getHiredService("a1");
+        this.activatedRoute.params.subscribe(({id, idService}) => {
+            this.agencyService.getServiceById(idService).subscribe((data) => {
+                this.infoService = data
+            })
+            this.getHiredService(id, idService);
+        })
     }
 
-    getHiredService(agencyId: string) {
-        this.agencyClientsService.getExtendInformation(agencyId, "customer").subscribe((response: any) => {
+    getHiredService(agencyId: string, idService: string) {
+        this.agencyService.getHiredServicesByServiceId(idService).subscribe((response: any) => {
           this.hiredServicesData = response;
-          //console.log(this.hiredServicesData);
-          this.agencyClientsService.getExtendInformation(agencyId, "service").subscribe((response: any) => {
-              this.hiredServicesP = response;
-              //console.log(this.hiredServicesP);
-              for(let i = 0; i < this.hiredServicesData.length; i++) {
-                  let fullName = `${this.hiredServicesData[i].customer.name} ${this.hiredServicesData[i].customer.lastName}`;
-                  this.hiredServicesData[i].customerName = fullName;
-                  this.hiredServicesData[i].service = this.hiredServicesP[i].service;
-              }
-          })
+          for(let i = 0; i < this.hiredServicesData.length; i++){
+              this.agencyService.getInfoUserById(this.hiredServicesData[i].customerId).subscribe((data) => {
+                  this.hiredServicesData[i].customerName = data.name + " "+  data.lastName
+                  this.hiredServicesData[i].customer = data
+              })
+          }
+          console.log(this.hiredServicesData)
         })
     }
 
