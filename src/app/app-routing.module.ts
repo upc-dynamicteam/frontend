@@ -34,6 +34,10 @@ const routes: Routes = [
         path: "profile-agency/:id/add-service",
         loadChildren: () => import("./add-service/add-service.module").then(m => m.AddServiceModule)
     },
+    {
+        path: "profile-agency/:id/update-service/:idService",
+        loadChildren: () => import("./update-service/update-service.module").then(m => m.UpdateServiceModule)
+    },
     { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 

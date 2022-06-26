@@ -25,5 +25,9 @@ export class ServiceAgencyProfileService {
         const URL = `https://fake-api-go2climb.herokuapp.com/customers/${id}`;
         return this.http.get<any>(URL);
     }
+    deleteServiceById(id: string): Observable<any>{
+        const URL = `https://fake-api-go2climb.herokuapp.com/services/${id}`;
+        return this.http.delete<any>(URL);
+    }
 }
 

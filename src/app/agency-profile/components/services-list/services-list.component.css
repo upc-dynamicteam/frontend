@@ -9,6 +9,7 @@
 .container-services{
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-row-gap: 1rem;
 }
 .element-service{
     display: flex;
@@ -62,7 +63,28 @@
     border-radius: 10px;
     border: none;
     padding: 10px;
-    font-weight: bold;
     background-color: #9CD4E7;
     cursor: pointer;
+}
+.content-buttons{
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: center;
+}
+.delete{
+    background-color: #F93154;
+}
+.update{
+    background-color: #00B74A;
+}
+.mr-10{
+    margin-right: 10px;
+}
+.btn-option{
+    border:none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+
 }

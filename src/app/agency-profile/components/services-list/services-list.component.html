@@ -9,6 +9,10 @@
                 <img src="{{element.photos}}" (click) = "goToService(element.id)" alt="" class = "img-card">
                 <p class = "element-description">{{element.description}}</p>
             </div>
+            <div class="content-buttons">
+                <button class = "mr-10 btn-option update" (click) = "updateService(element.id)">Editar</button>
+                <button class = "btn-option delete" (click) = "deleteService(element.id)">Eliminar</button>
+            </div>
         </article>
     </div>
 </div>
