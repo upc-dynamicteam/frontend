@@ -1,16 +1,32 @@
 .container{
     display: flex;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 70px auto;
+    background-color: #EDEDED;
 }
 .sidebar{
-    height: 100vh;
     width: 470px;
     background-color: #EDEDED;
     margin: 1vw;
+    height: 50px;
 }
 .profilePage{
-    margin: 0.4vw;
-    width: 100vw;
+    width: auto;
+    margin-top: 5px;
     background-color: #EDEDED;
+}
+@media only screen and (min-width: 320px) and (max-width: 670px) {
+    .sidebar{
+        height: 455px;
+        width: 250px;
+        margin-left: 30px;
+        background-color: #EDEDED;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .profilePage{
+        margin-left: 15px;
+    }
 }

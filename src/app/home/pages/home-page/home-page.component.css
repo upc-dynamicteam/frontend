@@ -1,7 +1,6 @@
 .container{
     height: 100%;
 }
-
 .container-flex{
     display: flex;
     flex-direction: column;
@@ -18,5 +17,14 @@
 }
 .mainPage{
     width: 100vw;
+    margin-top: 70px;
     background-color: #EDEDED;
+}
+@media only screen and (min-width: 320px) and (max-width: 550px) {
+    .content {
+        display: flex;
+    }
+    .sidebar{
+        display: none;
+    }
 }

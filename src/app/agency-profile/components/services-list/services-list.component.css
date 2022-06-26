@@ -3,14 +3,12 @@
     padding: 15px 30px;
     border-radius: 10px;
     background-color: white;
-    width: 945px;
+    width: 60vw;
+    margin-left: 15px;
 }
 .container-services{
-    /*display: flex;
-    justify-content: space-between;
-    width: 100%;*/
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
 }
 .element-service{
     display: flex;

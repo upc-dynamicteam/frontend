@@ -29,7 +29,7 @@
             <div class = "article-table-data-extra">
                 <div class = "article-table-data-extra-info flex">
                     <img src="{{service.infoService.photos}}" (click) = goToService(service.infoService.id)  alt="" class = "img-service">
-                    <p class = "ml-10">{{service.infoService.name}}</p>
+                    <p class = "ml-10" (click) = goToService(service.infoService.id) >{{service.infoService.name}}</p>
                 </div>
                 <div class = "article-table-data-extra-info">
                     <p>{{service.status}}</p>

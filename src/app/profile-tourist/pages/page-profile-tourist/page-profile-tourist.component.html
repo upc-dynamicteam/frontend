@@ -1,4 +1,8 @@
 <div class="container">
-    <app-profile [userInfo] = "userInfo"></app-profile>
-    <app-table-services [servicesUser]="services" [customerId]="userInfo.id"></app-table-services>
+    <div class="container-side">
+        <app-profile [userInfo] = "userInfo"></app-profile>
+    </div>
+    <div class="container-table">
+        <app-table-services [servicesUser]="services" [customerId]="userInfo.id"></app-table-services>
+    </div>
 </div>

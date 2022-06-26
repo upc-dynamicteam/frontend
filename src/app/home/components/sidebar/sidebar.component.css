@@ -6,6 +6,8 @@
     border-radius: 20px;
     padding: 10px;
     position: fixed;
+    top: 70px;
+    z-index: 2;
 }
 .flex{
     display: flex;
@@ -13,4 +15,9 @@
 }
 .left-align {
     text-align: left;
+}
+@media only screen and (min-width: 320px) and (max-width: 550px) {
+    .content {
+        display: none;
+    }
 }

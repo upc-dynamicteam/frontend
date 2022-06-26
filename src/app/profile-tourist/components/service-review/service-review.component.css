@@ -22,17 +22,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 400px;
+    width: 100%;
 }
+.content-header h1{
+    font-weight: bold;
+    margin-left: 100px;
+}
+@media only screen and (min-width: 320px) and (max-width: 670px) {
+    .modal-content-one{
+        width: 60%;
+        margin: 15% auto;
+    }
+    .content-header{
+    }
+    .content-header h1 {
+        font-size: 15px;
+        margin-left: 30px;
+    }
+}
+
+
 .close{
     font-size: 30px;
     margin-right: 20px;
     margin-bottom: 15px;
     cursor: pointer;
-}
-.content-header h1{
-    font-weight: bold;
-    margin-left: 100px;
 }
 .content-info p{
     font-size: 19px;
@@ -103,15 +117,18 @@
     border: 1px solid #888;
     width: 30%; /* Could be more or less, depending on screen size */
 }
-
 .content-header-2{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 400px;
+    justify-content: center;
+    width: 100%;
 }
 .content-header-2 h1{
     font-weight: bold;
+    margin-left: 50px;
+}
+.content-textarea{
+    margin-left: 50px;
 }
 .container-inputs{
     display: flex;
@@ -131,7 +148,7 @@
     outline: none;
 }
 .content-textarea{
-    margin-left: 50px;
+    width: 70%;
 }
 .content-textarea p {
     font-weight: bold;
@@ -140,7 +157,7 @@
     display: flex;
     justify-content: center;
     border: 3px solid #9CD4E7;
-    width: 465px;
+    width: 100%;
     height: 144px;
     padding: 10px;
     margin-top: 10px;
@@ -156,4 +173,26 @@
 }
 .container-buttons button{
     margin-left: 15px;
+}
+@media only screen and (min-width: 320px) and (max-width: 670px) {
+    .modal-content-two{
+        width: 65%;
+        margin: 15% auto;
+    }
+    .content-header-2{
+        display: flex;
+        justify-content: center;
+    }
+    .content-header-2 h1 {
+        margin-left: 50px;
+        font-size: 15px;
+    }
+    .content-textarea {
+        width: 95%;
+        padding-right: 20px;
+        margin-left: 0;
+    }
+    .content-textarea textarea{
+        width: 100%;
+    }
 }
