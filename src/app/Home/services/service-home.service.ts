@@ -10,7 +10,7 @@ export class ServiceHomeService {
   constructor(private http: HttpClient) { }
 
   getServicesOffer(): Observable<any>{
-      const URL = `https://fake-api-go2climb.herokuapp.com/services?isOffer=1`;
+      const URL = `http://localhost:8080/api/v1/services/isOffer=1`;
       return this.http.get<any>(URL);
   }
   getServicesPopular(): Observable<any>{
