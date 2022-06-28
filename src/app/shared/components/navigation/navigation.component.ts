@@ -22,7 +22,7 @@ export class NavigationComponent implements OnInit, OnDestroy{
 
     ngOnInit() {
         /*Cambiar a la foto del usuario registrado*/
-        this.photo = 'https://yt3.ggpht.com/ytc/AKedOLQMSrgxItPwy1gW4nke8tyEXNImWjwt3upFTg7g=s900-c-k-c0x00ffffff-no-rj';
+        this.photo = 'https://www.designevo.com/res/templates/thumb_small/black-circle-and-white-mountain.webp';
     }
 
     ngOnDestroy(): void {

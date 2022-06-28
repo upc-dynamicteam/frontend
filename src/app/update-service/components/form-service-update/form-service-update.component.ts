@@ -13,10 +13,12 @@ export class FormServiceUpdateComponent implements OnInit {
 
     infoService: any = {}
     idService: string = ""
+    idAgency: string = ""
 
   ngOnInit(): void {
-      this.activatedRoute.params.subscribe(({idService}) => {
+      this.activatedRoute.params.subscribe(({id, idService}) => {
           this.idService = idService
+          this.idAgency = id
             this.updateService.getInfoServiceById(idService).subscribe((data) => {
                 this.infoService = data
                 console.log(data)
@@ -25,7 +27,7 @@ export class FormServiceUpdateComponent implements OnInit {
   }
   updateServiceFunction(){
     this.updateService.updateInfoServiceById(this.idService, this.infoService).subscribe(() => {
-
+        this.router.navigate([`profile-agency/${this.idAgency}`]);
     })
   }
 }

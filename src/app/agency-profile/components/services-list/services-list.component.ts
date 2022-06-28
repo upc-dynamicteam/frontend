@@ -8,7 +8,6 @@ import {ServiceAgencyProfileService} from "../../services/service-agency-profile
   styleUrls: ['./services-list.component.css']
 })
 export class ServicesListComponent{
-    @Input()
     listServices: any = []
     idAgency: string = ""
 
@@ -18,7 +17,11 @@ export class ServicesListComponent{
     ngOnInit(): void{
         this.activatedRoute.params.subscribe(({id}) => {
             this.idAgency = id
+            this.serviceAgency.getServicesByAgencyId(id).subscribe((data) => {
+                this.listServices = data
+            })
         })
+
     }
     goToService(id: string) {
         this.router.navigate([`service/${id}`]);
@@ -29,6 +32,14 @@ export class ServicesListComponent{
     deleteService(id: string){
         this.serviceAgency.deleteServiceById(id).subscribe(() => {
         })
+        let index = 0
+        for(let i = 0; i < this.listServices.length; i++){
+            if(this.listServices[i].id == id){
+                index = i
+            }
+        }
+        this.listServices.splice(index, 1)
+        console.log(this.listServices)
     }
     updateService(id: string){
         this.router.navigate([`profile-agency/${this.idAgency}/update-service/${id}`])

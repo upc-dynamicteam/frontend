@@ -7,7 +7,7 @@
         <article *ngFor=" let element of listServices">
             <div class="element-service">
                 <img src="{{element.photos}}" (click) = "goToService(element.id)" alt="" class = "img-card">
-                <p class = "element-description">{{element.description}}</p>
+                <p class = "element-description">{{element.name}}</p>
             </div>
             <div class="content-buttons">
                 <button class = "mr-10 btn-option update" (click) = "updateService(element.id)">Editar</button>

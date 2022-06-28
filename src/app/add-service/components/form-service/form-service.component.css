@@ -25,9 +25,10 @@
     height: 40px;
     border-radius: 20px;
     padding-left: 10px;
-    font-weight: bold;
-    color: #C4C4C4;
     border: 3px solid #B6DDE9;
+}
+.input:focus{
+    outline: none;
 }
 .input-top{
     border-bottom-left-radius: 0px;

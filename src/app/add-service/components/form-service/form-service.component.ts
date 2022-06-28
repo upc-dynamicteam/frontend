@@ -11,14 +11,15 @@ export class FormServiceComponent implements OnInit {
 
     newService = {
         "name": "",
-        "price": "0",
-        "newPrice": "0",
+        "price": 0,
+        "score": 0,
+        "newPrice": 0,
         "location": "",
         "creationDate": "",
         "photos": "",
         "description": "",
-        "isOffer": "0",
-        "isPopular": "0",
+        "isOffer": 0,
+        "isPopular": 0,
         "agencyId": ""
     }
     idAgency: string = ""
@@ -36,9 +37,11 @@ export class FormServiceComponent implements OnInit {
       let randomNumber = Math.ceil(Math.random() * (200 - 100 + 1) + 100)
       this.newService.creationDate = date
       this.newService.photos = `https://picsum.photos/200/${randomNumber}`
-      this.newService.agencyId = this.idAgency;
+      this.newService.agencyId = this.idAgency
+      //this.newService.agencyId = this.idAgency;
       console.log(this.newService)
       this.addService.createNewService(this.newService).subscribe(() => {
+          console.log("!!")
       })
       this.router.navigate([`profile-agency/${this.idAgency}`]);
   }
