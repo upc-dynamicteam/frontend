@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
 import { catchError, Observable, retry, throwError } from "rxjs";
 import { Service } from "../interfaces/service";
+import {environment} from "../../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ import { Service } from "../interfaces/service";
 export class ServicesService {
     //Agencies EndPoint
     basePath = 'https://fake-api-go2climb.herokuapp.com/services'
-
+    private baseUrl: string = environment.baseUrl;
     constructor(private http: HttpClient) { }
 
     //HTTP Default options
@@ -41,7 +42,7 @@ export class ServicesService {
     }
 
     getAllByText(text: string): Observable<Service> {
-        return this.http.get<Service>(`${this.basePath}?name_like=${text}`)
+        return this.http.get<Service>(`${this.baseUrl}/services/name_like=${text}`)
             .pipe(retry(2),
                 catchError(this.handleError));
     }

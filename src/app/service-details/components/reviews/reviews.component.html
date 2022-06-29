@@ -4,8 +4,8 @@
   </mat-card-header>
     <div *ngFor = "let review of reviews">
         <mat-card-header class="agency-info" >
-            <img mat-card-avatar class="image" src="{{review.infoCustomer.photo}}" alt="">
-            <mat-card-title>{{review.infoCustomer.name}} {{review.infoCustomer.lastName}} </mat-card-title>
+            <img mat-card-avatar class="image" src="{{review.tourist.photo}}" alt="">
+            <mat-card-title>{{review.tourist.name}} {{review.tourist.lastName}} </mat-card-title>
             <mat-card-subtitle>Fecha: {{review.date}} </mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>

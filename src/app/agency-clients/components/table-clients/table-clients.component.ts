@@ -35,14 +35,8 @@ export class TableClientsComponent implements OnInit {
 
     getHiredService(agencyId: string, idService: string) {
         this.agencyService.getHiredServicesByServiceId(idService).subscribe((response: any) => {
-          this.hiredServicesData = response;
-          for(let i = 0; i < this.hiredServicesData.length; i++){
-              this.agencyService.getInfoUserById(this.hiredServicesData[i].customerId).subscribe((data) => {
-                  this.hiredServicesData[i].customerName = data.name + " "+  data.lastName
-                  this.hiredServicesData[i].customer = data
-              })
-          }
-          console.log(this.hiredServicesData)
+          this.hiredServicesData = response.content;
+          console.log("lala",this.hiredServicesData)
         })
     }
 

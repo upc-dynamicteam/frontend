@@ -17,16 +17,8 @@ export class PageProfileTouristComponent implements OnInit {
   ngOnInit(): void {
 
       this.activatedRoute.params.subscribe(({id}) => {
-          this.serviceProfileTourist.getServicesByUser(id).subscribe((data) => {
-              this.services = data
-              for(let i = 0; i < this.services.length; i++){
-                  this.serviceProfileTourist.getServiceInfoById(this.services[i].serviceId).subscribe((data) =>{
-                      this.services[i].infoService = data
-                      this.serviceProfileTourist.getAgencyInfoById(this.services[i].infoService.agencyId).subscribe((data) =>{
-                          this.services[i].infoAgency = data
-                      })
-                  })
-              }
+          this.serviceProfileTourist.getHiredServicesByIdTourist(id).subscribe((data) => {
+              this.services = data.content
               console.log(this.services)
           })
           this.serviceProfileTourist.getInfoUserById(id).subscribe((data) => {

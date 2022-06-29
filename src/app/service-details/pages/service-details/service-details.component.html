@@ -1,8 +1,5 @@
-<!--<mat-toolbar color="primary">
-  <span>Detalles del servicio</span>
-</mat-toolbar>-->
 <div class="container">
-    <app-coverPage></app-coverPage>
-    <app-information></app-information>
+    <app-coverPage [infoService]="infoService"></app-coverPage>
+    <app-information [infoService]="infoService"></app-information>
     <app-reviews></app-reviews>
 </div>

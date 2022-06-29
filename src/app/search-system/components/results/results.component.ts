@@ -32,7 +32,7 @@ export class ResultsComponent implements OnInit, OnDestroy {
     async getMatches() {
         await new Promise(f => setTimeout(f, 100));
         this.servicesService.getAllByText(this.text).subscribe((response: any) => {
-            this.services = response;
+            this.services = response.content;
         })
     }
 

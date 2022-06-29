@@ -1,45 +1,38 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {environment} from "../../../environments/environment";
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceProfileTouristService {
-
+    private baseUrl: string = environment.baseUrl;
     constructor(private http: HttpClient) { }
 
-    getServicesByUser(id: string): Observable<any> {
-        const URL = `https://fake-api-go2climb.herokuapp.com/hiredServices?customerId=${id}`;
-        return this.http.get<any>(URL);
-    }
-    getServiceInfoById(id: string): Observable<any> {
-        const URL = `https://fake-api-go2climb.herokuapp.com/services/${id}`;
-        return this.http.get<any>(URL);
-    }
-    getAgencyInfoById(id: string): Observable<any> {
-        const URL = `https://fake-api-go2climb.herokuapp.com/agencies/${id}`;
+    getHiredServicesByIdTourist(id: string): Observable<any> {
+        const URL = `${this.baseUrl}/hired-services/touristId=${id}`;
         return this.http.get<any>(URL);
     }
     updateInfoUser(id: string, data: any): Observable<any>{
-        const URL = `https://fake-api-go2climb.herokuapp.com/customers/${id}`;
+        const URL = `${this.baseUrl}/tourists/${id}`;
         return this.http.put<any>(URL, data);
     }
-    updateHiredService(id: string, data: any): Observable<any>{
-        const URL = `https://fake-api-go2climb.herokuapp.com/hiredServices/${id}`;
-        return this.http.patch<any>(URL, data);
+    updateHiredService(idService: string, idTourist: string, idHiredService: string, data: any): Observable<any>{
+        const URL = `${this.baseUrl}/services/${idService}/hired-services/touristId=${idTourist}/${idHiredService}`;
+        return this.http.put<any>(URL, data);
     }
-    createAgencyReview(data: any): Observable<any>{
-        const URL = `https://fake-api-go2climb.herokuapp.com/agencyReviews`;
+    createAgencyReview(data: any, idAgency: string, idTourist: string): Observable<any>{
+        const URL = `${this.baseUrl}/agencies/${idAgency}/agency-reviews/touristId=${idTourist}`;
         return this.http.post<any>(URL, data);
     }
-    createServiceReview(data: any):Observable<any>{
-        const URL = `https://fake-api-go2climb.herokuapp.com/serviceReviews`;
+    createServiceReview(data: any, idService: string, idTourist: string):Observable<any>{
+        const URL = `${this.baseUrl}/services/${idService}/service-reviews/touristId=${idTourist}`;
         return this.http.post<any>(URL, data);
     }
     getInfoUserById(id: string): Observable<any> {
-        const URL = `https://fake-api-go2climb.herokuapp.com/customers/${id}`;
+        const URL = `${this.baseUrl}/tourists/${id}`;
         return this.http.get<any>(URL);
     }
 

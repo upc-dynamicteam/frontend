@@ -17,19 +17,10 @@ export class ReviewsComponent implements OnInit {
 
   ngOnInit() :void {
       this.activatedRoute.params.subscribe(({id}) => {
-          this.serviceServiceInfo.getInfoServiceById(id).subscribe((data) => {
-              this.infoService = data
-              console.log(this.infoService)
-              this.serviceServiceInfo.getReviewServiceByIdService(this.infoService.id).subscribe((data) => {
-                  this.reviews = data
-                  for(let i = 0; i < this.reviews.length; i++){
-                      this.serviceServiceInfo.getInfoCustomerById(this.reviews[i].customerId).subscribe((data) => {
-                          this.reviews[i].infoCustomer =  data
-                      })
-                  }
-                  console.log(this.reviews)
-              })
-          })
+         this.serviceServiceInfo.getReviewServiceByIdService(id).subscribe((data) => {
+             this.reviews = data.content
+             console.log(data.content)
+         })
       })
   }
     calc(n: string, t: number): Array<number> {

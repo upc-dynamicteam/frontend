@@ -18,19 +18,14 @@ export class AgencyProfileComponent implements OnInit {
     ngOnInit(): void{
         this.activatedRoute.params.subscribe(({id}) => {
             this.serviceProfileAgency.getServicesByAgencyId(id).subscribe((data) => {
-                this.listServices = data
+                this.listServices = data.content
             })
             this.serviceProfileAgency.getInfoAgencyById(id).subscribe((data) => {
                 this.agencyData = data
             })
             this.serviceProfileAgency.getReviewsAgencyById(id).subscribe((data) => {
-                this.listReviews = data
-                for(let i = 0; i < this.listReviews.length; i++){
-                    this.serviceProfileAgency.getCustomerInfoById(this.listReviews[i].customerId).subscribe((data) => {
-                        this.listReviews[i].customerInfo = data
-                    })
-                }
-                console.log(data)
+                this.listReviews = data.content
+                console.log(this.listReviews)
             })
         })
     }

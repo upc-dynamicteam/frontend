@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
 import { catchError, Observable, retry, throwError } from "rxjs";
 import { Agency } from "../interfaces/agency";
+import {environment} from "../../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ import { Agency } from "../interfaces/agency";
 export class AgenciesService {
     //Agencies EndPoint
     basePath = 'https://fake-api-go2climb.herokuapp.com/agencies'
-
+    private baseUrl: string = environment.baseUrl;
     constructor(private http: HttpClient) { }
 
     //HTTP Default options
@@ -43,7 +44,7 @@ export class AgenciesService {
 
     //Get agency by Id
     getById(id: string): Observable<Agency> {
-        return this.http.get<Agency>(`${this.basePath}/${id}`)
+        return this.http.get<Agency>(`${this.baseUrl}/agencies/${id}`)
             .pipe(retry(2),
                 catchError(this.handleError));
     }
@@ -63,7 +64,7 @@ export class AgenciesService {
 
     //Update agency
     update(id: string, updateAgencyDto: Agency): Observable<Agency> {
-        return this.http.put<Agency>(`${this.basePath}/${id}`, JSON.stringify(updateAgencyDto), this.httpOptions)
+        return this.http.put<Agency>(`${this.baseUrl}/agencies/${id}`, JSON.stringify(updateAgencyDto), this.httpOptions)
             .pipe(retry(2),
                 catchError(this.handleError));
     }
@@ -72,7 +73,7 @@ export class AgenciesService {
         return this.http.get<any>(URL);
     }
     getHiredServicesByServiceId(id: string):Observable<any>{
-        const URL = `https://fake-api-go2climb.herokuapp.com/hiredServices/?serviceId=${id}`;
+        const URL = `${this.baseUrl}/services/${id}/hired-services`;
         return this.http.get<any>(URL);
     }
     getInfoUserById(id: string):Observable<any>{

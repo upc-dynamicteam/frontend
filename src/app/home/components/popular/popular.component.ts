@@ -14,7 +14,7 @@ export class PopularComponent{
     }
     ngOnInit(): void {
         this.offerServices.getServicesPopular().subscribe((data) => {
-            this.listPopulars = data
+            this.listPopulars = data.content
             for(let i = 0; i < this.listPopulars.length; i++){
                 this.listPopulars[i].price = parseInt(this.listPopulars[i].price)
                 this.listPopulars[i].newPrice = parseInt(this.listPopulars[i].newPrice)

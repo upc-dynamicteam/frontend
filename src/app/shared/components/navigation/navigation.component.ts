@@ -22,7 +22,7 @@ export class NavigationComponent implements OnInit, OnDestroy{
 
     ngOnInit() {
         /*Cambiar a la foto del usuario registrado*/
-        this.photo = 'https://www.designevo.com/res/templates/thumb_small/black-circle-and-white-mountain.webp';
+        this.photo = 'https://www.entornoturistico.com/wp-content/uploads/2020/09/agencia-de-viajes-1024x594.jpg';
     }
 
     ngOnDestroy(): void {

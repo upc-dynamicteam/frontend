@@ -15,7 +15,8 @@ export class OffersComponent {
     }
     ngOnInit(): void {
         this.offerServices.getServicesOffer().subscribe((data) => {
-            this.listOffers = data
+            console.log(data)
+            this.listOffers = data.content
             for(let i = 0; i < this.listOffers.length; i++){
                 this.listOffers[i].price = parseInt(this.listOffers[i].price)
                 this.listOffers[i].newPrice = parseInt(this.listOffers[i].newPrice)

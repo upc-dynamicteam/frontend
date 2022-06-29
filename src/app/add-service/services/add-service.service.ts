@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {environment} from "../../../environments/environment";
 import {Observable} from "rxjs";
 
 @Injectable({
@@ -7,17 +8,15 @@ import {Observable} from "rxjs";
 })
 export class AddServiceService {
 
+   private baseUrl: string = environment.baseUrl;
   constructor(private http: HttpClient) { }
 
-    private headers= new HttpHeaders()
-        .set('content-type', 'application/json')
-        .set('Access-Control-Allow-Origin', '*');
    getInfoAgencyById(id: string): Observable<any> {
-        const URL = `https://fake-api-go2climb.herokuapp.com/agencies/${id}`;
+        const URL = `${this.baseUrl}/agencies/${id}`;
         return this.http.get<any>(URL);
    }
-   createNewService(data: any): Observable<any>{
-       const URL = `https://fake-api-go2climb.herokuapp.com/services`;
+   createNewService(data: any, idAgency: string): Observable<any>{
+       const URL = `${this.baseUrl}/agencies/${idAgency}/services`;
        return this.http.post<any>(URL, data);
    }
 }

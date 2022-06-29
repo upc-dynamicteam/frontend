@@ -15,11 +15,10 @@
         <article class = "article-table" *ngFor = "let service of servicesUser">
             <div class = "article-table-data">
                 <div class="article-table-data-info">
-                    <p>Número del servicio: {{service.numberService}}</p>
-                    <p>Hora y fecha de la solicitud: {{service.scheduleDate}}</p>
+                    <p>Hora y fecha de la solicitud: {{service.scheduledDate}}</p>
                 </div>
                 <div class="article-table-data-info">
-                    <p>Agencia: {{service.infoAgency.name}}</p>
+                    <p>Agencia: {{service.service.agency.name}}</p>
                 </div>
                 <div class="article-table-data-info">
                     <p>Importe total: </p>
@@ -28,22 +27,22 @@
             </div> <!-- Fin de article table data -->
             <div class = "article-table-data-extra">
                 <div class = "article-table-data-extra-info flex">
-                    <img src="{{service.infoService.photos}}" (click) = goToService(service.infoService.id)  alt="" class = "img-service">
-                    <p class = "ml-10" (click) = goToService(service.infoService.id) >{{service.infoService.name}}</p>
+                    <img src="{{service.service.photos}}" (click) = goToService(service.service.id)  alt="" class = "img-service">
+                    <p class = "ml-10" (click) = goToService(service.service.id) >{{service.service.name}}</p>
                 </div>
                 <div class = "article-table-data-extra-info">
                     <p>{{service.status}}</p>
                 </div>
                 <div class = "article-table-data-extra-info">
                     <div *ngIf = "service.status == 'En proceso';else disabledButton">
-                        <button class = "btn" (click) = "openReview(service.infoService.id, service.infoAgency.id, service, service.id)">Calificar servicio</button>
+                        <button class = "btn" (click) = "openReview(service.service.id, service.service.agency.id, service, service.service.id, service.price, service.amount)">Calificar servicio</button>
                     </div>
                     <ng-template #disabledButton>
                         <button class = "btn-disabled" disabled>Servicio ya  calificado</button>
                     </ng-template>
                 </div>
             </div>
-            <app-service-review [hiredServiceId] = "hiredServiceId" [service] = "service" [serviceId]="serviceId" [agencyId] = "agencyId" [customerId]="customerId" id = "review"></app-service-review>
+            <app-service-review [hiredServiceId] = "hiredServiceId" [service] = "service" [serviceId]="serviceId" [agencyId] = "agencyId" [amount]="amount" [price]="price" [customerId]="customerId" id = "review"></app-service-review>
         </article>
     </section>
     <ng-template #noServices>

@@ -18,6 +18,7 @@ export class AgencyClientsComponent implements OnInit {
       this.activatedRoute.params.subscribe(({id, idService}) => {
             this.agency.getById(id).subscribe((data) => {
                 this.agencyData = data
+                console.log("profile", data)
             })
           this.agency.getServiceById(idService).subscribe((data) => {
               this.serviceInfo = data

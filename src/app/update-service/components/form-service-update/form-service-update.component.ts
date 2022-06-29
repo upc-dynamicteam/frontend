@@ -26,7 +26,8 @@ export class FormServiceUpdateComponent implements OnInit {
       })
   }
   updateServiceFunction(){
-    this.updateService.updateInfoServiceById(this.idService, this.infoService).subscribe(() => {
+      console.log("PRUEBA", this.infoService)
+    this.updateService.updateInfoServiceById(this.idAgency, this.idService, this.infoService).subscribe(() => {
         this.router.navigate([`profile-agency/${this.idAgency}`]);
     })
   }

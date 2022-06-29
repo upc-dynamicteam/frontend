@@ -14,7 +14,7 @@ export class ForYouComponent{
     }
     ngOnInit(): void {
         this.offerServices.getServices().subscribe((data) => {
-            this.listForYou = data
+            this.listForYou = data.content
             for(let i = 0; i < this.listForYou.length; i++){
                 this.listForYou[i].price = parseInt(this.listForYou[i].price)
                 this.listForYou[i].newPrice = parseInt(this.listForYou[i].newPrice)

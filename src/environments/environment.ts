@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-    baseUrl: "http://localhost:8080/api/v1/"
+    baseUrl: "https://aos-go2climb.herokuapp.com/api/v1"
 };
 
 /*

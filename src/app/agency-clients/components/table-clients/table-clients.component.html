@@ -12,19 +12,19 @@
             <!-- Position Column -->
             <ng-container matColumnDef="username">
                 <th mat-header-cell *matHeaderCellDef> Nombre de usuario </th>
-                <td mat-cell *matCellDef="let element"> {{element.customerName}} </td>
+                <td mat-cell *matCellDef="let element"> {{element.tourist.name}} </td>
             </ng-container>
 
             <!-- Name Column -->
             <ng-container matColumnDef="email">
                 <th mat-header-cell *matHeaderCellDef> Correo electronico </th>
-                <td mat-cell *matCellDef="let element"> {{element.customer.email}} </td>
+                <td mat-cell *matCellDef="let element"> {{element.tourist.email}} </td>
             </ng-container>
 
             <!-- Weight Column -->
             <ng-container matColumnDef="phone">
                 <th mat-header-cell *matHeaderCellDef> Teléfono </th>
-                <td mat-cell *matCellDef="let element"> {{element.customer.phoneNumber}} </td>
+                <td mat-cell *matCellDef="let element"> {{element.tourist.phoneNumber}} </td>
             </ng-container>
 
             <!-- Symbol Column -->
@@ -36,7 +36,7 @@
             <!-- Symbol Column -->
             <ng-container matColumnDef="date">
                 <th mat-header-cell *matHeaderCellDef> Fecha de salida </th>
-                <td mat-cell *matCellDef="let element"> {{element.scheduleDate}} </td>
+                <td mat-cell *matCellDef="let element"> {{element.scheduledDate}} </td>
             </ng-container>
 
             <!-- Symbol Column -->
